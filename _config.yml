@@ -23,8 +23,6 @@ picture:
 
 # Build info
 incremental: true
-plugins:
-  - jekyll-redirect-from
 
 include:
   - _redirects
