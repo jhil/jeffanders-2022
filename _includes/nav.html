@@ -7,13 +7,13 @@
 
 	<nav class="section-nav">
 		<ul>
-			<a class="nav-team" href="/#teams"><li>Teams<span class="active-dot"></span></li></a>
-			<a class="nav-project" href="/#projects"><li>Projects<span class="active-dot"></span></li></a>
-			<a class="nav-talk" href="/#talks"><li>Talks<span class="active-dot"></span></li></a>
-			{% comment %} <a class="nav-article" href="/#writing"><li>Writing<span class="active-dot"></span></li></a> {% endcomment %}
-			<a class="nav-list" href="/#lists"><li>Lists<span class="active-dot"></span></li></a>
-			<a class="nav-about" href="/#about"><li>About<span class="active-dot"></span></li></a>
-			<a class="nav-contact" href="/#contact"><li>Contact<span class="active-dot"></span></li></a>
+			<a class="nav-team" href="/#teams"><li>Teams<span class="active-"></span></li></a>
+			<a class="nav-project" href="/#projects"><li>Projects<span class="active-"></span></li></a>
+			<a class="nav-talk" href="/#talks"><li>Talks<span class="active-"></span></li></a>
+			{% comment %} <a class="nav-article" href="/#writing"><li>Writing<span class="active-"></span></li></a> {% endcomment %}
+			<a class="nav-list" href="/#lists"><li>Lists<span class="active-"></span></li></a>
+			<a class="nav-about" href="/#about"><li>About<span class="active-"></span></li></a>
+			<a class="nav-contact" href="/#contact"><li>Contact<span class="active-"></span></li></a>
 		</ul>
 	</nav>
 
@@ -21,7 +21,7 @@
   		{% for contact in site.data.contacts limit:3 %}
 		  	<a class="sidebar-social-item" href="{{ contact.link }}" title="{{ contact.name }}" target="_blank" rel="noopener">{% include icons/{{ contact.icon }}.html %}</a>
 		{% endfor %}
-		<a class="sidebar-social-item" href="/#contact" title="More Contact">{% include icons/dots-horizontal.html %}</a>
+		<a class="sidebar-social-item" href="/#contact" title="More Contact">{% include icons/s-horizontal.html %}</a>
 	</div>
 
 </div>

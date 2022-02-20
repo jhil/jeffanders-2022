@@ -1,7 +1,7 @@
 $content-width: 81rem;
 
 $t: color 0.5s ease, fill 0.5s ease, background-color 0.5s ease,
-	box-shadow 0.5s ease, opacity 2s ease, transform 0.5s ease, border-bottom 0.5s ease;
+	box-shadow 0.5s ease, opacity 0.5s ease, transform 0.5s ease, border-bottom 0.5s ease;
 
 $t-fast: color 0.25s ease, fill 0.25s ease, background-color 0.25s ease,
 	box-shadow 0.25s ease, opacity 0.25s ease, transform 0.25s ease, border-bottom 0.25s ease;
@@ -54,7 +54,7 @@ img,picture {
 }
 
 hr {
-	margin: 4.5rem 0;
+	margin: 3rem 0;
 	border: 0;
 	border-bottom: 2px $lighter-gray solid;
 }
