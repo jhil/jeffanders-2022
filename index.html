@@ -7,7 +7,7 @@ title: Jeff Anders
 	<a id="teams"><h2 class="section-title">Teams</h2></a>
 	<ul class="card-grid card-grid-compact card-grid-compact-medium">
   		{% for team in site.data.teams %}
-			<a href="{{ team.link }}"><li class="compact-card compact-card-medium"><img src="{{ team.image }}" alt="{{ team.company }} logo"><h3>{{ team.company }}</h3><p class="card-secondary{% unless team.active %} team-past{% endunless %}">{{ team.role }}</p></li></a>
+			<a href="{{ team.link }}" class="compact-card compact-card-medium"><img src="{{ team.image }}" alt="{{ team.company }} logo"><h3>{{ team.company }}</h3><p class="card-secondary{% unless team.active %} team-past{% endunless %}">{{ team.role }}</p></a>
 		{% endfor %}
 	</ul>
 </section>
@@ -77,9 +77,7 @@ title: Jeff Anders
 	<ul class="card-grid card-grid-compact">
 	    {% assign sortedlists = site.categories.list | sort: 'title' %}
     	{% for post in sortedlists %}
-			<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank" rel="noopener"{% endif %}>
-				<li class="compact-card">{% include icons/{{ post.thumbnail }}.html %}<h3>{{ post.title }}</h3></li>
-			</a>
+			<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank" rel="noopener"{% endif %} class="compact-card">{% include icons/{{ post.thumbnail }}.html %}<h3>{{ post.title }}</h3></a>
 		{% endfor %}
 	</ul>
 </section>
@@ -98,14 +96,14 @@ title: Jeff Anders
 	</div>
 </section>
 
-	<section data-section-id="contact" class="animated-section section-contact">
-		<a id="contact"></a>
-		<ul class="card-grid card-grid-compact contact-grid">
-			{% for contact in site.data.contacts %}
-				<a href="{{ contact.link }}" target="_blank" rel="noopener"><li class="compact-card">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></li></a>
-			{% endfor %}
-		</ul>
-	</section>
+<section data-section-id="contact" class="animated-section section-contact">
+	<a id="contact"></a>
+	<ul class="card-grid card-grid-compact contact-grid">
+		{% for contact in site.data.contacts %}
+			<a href="{{ contact.link }}" target="_blank" rel="noopener" class="compact-card">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></a>
+		{% endfor %}
+	</ul>
+</section>
 
 <!-- Javascript -->
 <script type="text/javascript" src="/js/hidden.js"></script>

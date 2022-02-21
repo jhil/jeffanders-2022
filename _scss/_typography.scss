@@ -48,14 +48,14 @@ $serif: Georgia, serif;
 p, .p {
 	font-size: 1rem;
 	font-family: $sans;
-	font-weight: $regular;
+	font-variation-settings: 'wght' 450;
 	line-height: 1.5;
 }
 
 h1, %h1, .h1 {
 	font-size: 3.5rem;
 	font-family: $sans;
-	font-weight: $medium;
+	font-variation-settings: 'wght' 500;
 	line-height: 1.25;
 	@media screen and (max-width: $phone-portrait-max) {
 		font-size: 2rem;
@@ -65,13 +65,13 @@ h1, %h1, .h1 {
 h2, %h2, .h2 {
 	font-size: 1.5rem;
 	font-family: $sans;
-	font-weight: $demi;
+	font-variation-settings: 'wght' 550;
 	line-height: 1.667;
 }
 
 h3, %h3, .h3 {
 	@extend .p;
-	font-weight: $medium;
+	font-variation-settings: 'wght' 550;
 }
 
 h4, %h4, .h4 {
@@ -83,11 +83,11 @@ h5, %h5, .h5 {
 }
 
 strong {
-	font-weight: $medium;
+	font-variation-settings: 'wght' 550;
 }
 
 a {
-	font-weight: $medium;
+	font-variation-settings: 'wght' 550;
 }
 
 p code {

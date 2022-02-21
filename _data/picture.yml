@@ -1,7 +1,8 @@
 presets:
   default:
     formats: [webp, original]
-    widths: [400, 640, 1280, 1600, 1920]
+    # widths: [400, 640, 1280, 1600, 1920]
+    widths: [400]
     keep: center
     quality: 90
     format_quality:

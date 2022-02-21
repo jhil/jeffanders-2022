@@ -21,7 +21,7 @@ picture:
   fast_build: true
   ignore_missing_images: development
   suppress_warnings: true
-  disabled: development
+  # disabled: development
 
 # Build info
 incremental: true

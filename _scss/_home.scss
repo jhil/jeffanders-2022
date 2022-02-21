@@ -12,22 +12,21 @@
 	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 	gap: 3rem;
 	transition: $t;
-	picture, p, h3, h2, h1 {
+	picture,
+	p,
+	h3,
+	h2,
+	h1 {
 		margin-bottom: 0;
 		margin-top: 0;
 	}
 	@media screen and (max-width: $tablet-portrait-max) {
-		width: calc(100vw - 6rem);
 		grid-template-columns: repeat(auto-fit, minmax(1fr));
 	}
-	@media screen and (max-width: $phone-portrait-max) {
-		width: calc(100vw - 3rem);
-	}
-
-
 }
 
 .card-item {
+	@extend .animate-together;
 	.card-image {
 		border-radius: $corner-radius;
 		transition: $t;
@@ -57,8 +56,8 @@
 	}
 	&:active {
 		.card-image {
-		transform: translateY(-0.125rem);
-		box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.075);
+			transform: translateY(-0.125rem);
+			box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.075);
 		}
 	}
 }
@@ -99,8 +98,8 @@
 
 .team-past {
 	text-decoration: line-through;
-    text-decoration-color: $light-gray;
-    text-decoration-thickness: 1px;
+	text-decoration-color: $light-gray;
+	text-decoration-thickness: 1px;
 }
 
 .card-grid-compact {
@@ -156,14 +155,74 @@ svg {
 .about-hello {
 	@media screen and (min-width: $tablet-landscape-min) {
 		display: grid;
-		grid-template-columns: 1fr 2fr;	
+		grid-template-columns: 1fr 2fr;
 	}
-	gap: 3rem;
+	picture {
+		width: 100%;
+	}
+	gap: 6rem;
 	p {
+		@media screen and (min-width: $tablet-landscape-min) {
+			margin-left: -3rem;
+		}
 		margin-bottom: 1.5rem;
 		max-width: 39rem;
 		&:last-of-type {
 			margin-bottom: 0;
+		}
+	}
+}
+.section-teams .compact-card {
+	@extend .animate-together;
+	@for $c1 from 1 through $limit-teams {
+		&:nth-child(#{$c1}) {
+			animation-delay: 100ms * $c1;
+		}
+	}
+}
+
+.card-item-category-project {
+	@extend .animate-together;
+	@for $c2 from 1 through $limit-projects {
+		&:nth-child(#{$c2}) {
+			animation-delay: 100ms * $c2;
+		}
+	}
+	@for $c3 from calc($limit-projects + 1) through 32 {
+		&:nth-child(#{$c3}) {
+			animation-delay: 100ms * $c3 - $limit-projects * 100ms;
+		}
+	}
+}
+
+.card-item-category-talk {
+	@extend .animate-together;
+	@for $c4 from 1 through $limit-talks {
+		&:nth-child(#{$c4}) {
+			animation-delay: 100ms * $c4;
+		}
+	}
+	@for $c5 from calc($limit-talks + 1) through 32 {
+		&:nth-child(#{$c5}) {
+			animation-delay: 100ms * $c5 - $limit-talks * 100ms;
+		}
+	}
+}
+
+.section-lists .compact-card {
+	@extend .animate-together;
+	@for $c6 from 1 through 6 {
+		&:nth-child(#{$c6}) {
+			animation-delay: 100ms * $c6;
+		}
+	}
+}
+
+.section-contact .compact-card {
+	@extend .animate-together;
+	@for $c7 from 1 through 24 {
+		&:nth-child(#{$c7}) {
+			animation-delay: 100ms * $c7;
 		}
 	}
 }

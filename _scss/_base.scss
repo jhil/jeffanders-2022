@@ -1,14 +1,59 @@
 $content-width: 81rem;
 
 $t: color 0.5s ease, fill 0.5s ease, background-color 0.5s ease,
-	box-shadow 0.5s ease, opacity 0.5s ease, transform 0.5s ease, border-bottom 0.5s ease;
+	box-shadow 0.5s ease, opacity 0.5s ease, transform 0.5s ease,
+	border-bottom 0.5s ease, font-variation-settings 0.5s ease;
 
 $t-fast: color 0.25s ease, fill 0.25s ease, background-color 0.25s ease,
-	box-shadow 0.25s ease, opacity 0.25s ease, transform 0.25s ease, border-bottom 0.25s ease;
+	box-shadow 0.25s ease, opacity 0.25s ease, transform 0.25s ease,
+	border-bottom 0.25s ease, font-variation-settings 0.25s ease;
+
+@keyframes animate-fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes animate-slideup {
+	from {
+		transform: translateY(1rem);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+.animate-fadein {
+	animation-duration: 1s;
+	animation-name: animate-fadein;
+	animation-fill-mode: backwards;
+	animation-delay: 0.25s;
+	animation-timing-function: ease;
+}
+
+.animate-slideup {
+	animation-duration: 1s;
+	animation-name: animate-slideup;
+	animation-fill-mode: backwards;
+	animation-delay: 0.25s;
+	animation-timing-function: ease;
+}
+
+.animate-together {
+	@extend .animate-fadein;
+	animation-name: animate-fadein, animate-slideup;
+}
 
 $corner-radius: 0.25rem;
 
 $sidebar-width: 18rem;
+
+$limit-teams: 6;
+$limit-projects: 24;
+$limit-talks: 8;
 
 html {
 	height: 100%;
@@ -25,6 +70,7 @@ body {
 	font-weight: $regular;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
+	@extend .animate-fadein;
 }
 
 .container {
@@ -40,7 +86,8 @@ a:hover {
 	text-decoration: none;
 }
 
-img,picture {
+img,
+picture {
 	max-width: 100%;
 	display: block;
 }
@@ -60,6 +107,7 @@ hr {
 }
 
 .wrapper {
+	box-sizing: border-box;
 	padding: 3rem;
 	@media screen and (max-width: $phone-portrait-max) {
 		padding: 1.5rem;
@@ -67,11 +115,11 @@ hr {
 }
 
 .content {
-	max-width: 93rem;
-	width: 100%;
 	@media screen and (min-width: $tablet-landscape-min) {
 		padding-left: $sidebar-width + 3rem;
 	}
+	max-width: 93rem;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -89,7 +137,8 @@ section,
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	img, picture {
+	img,
+	picture {
 		flex-shrink: 0;
 		object-fit: cover;
 		min-width: 100%;
@@ -125,6 +174,10 @@ section,
 	padding-top: 56.25%;
 }
 
+.ratio-8_5:before {
+	padding-top: 62.5%;
+}
+
 .ratio-3_2:before {
 	padding-top: 66.67%;
 }
@@ -133,8 +186,8 @@ section,
 	padding-top: 75%;
 }
 
-.ratio-8_5:before {
-	padding-top: 62.5%;
+.ratio-1_1:before {
+	padding-top: 100%;
 }
 
 .shadow {
