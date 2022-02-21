@@ -8,7 +8,7 @@ thumbnail: splitsies_logo.png
 color: "#7BC773"
 ---
 
-Splitsies is a no-frills approach to splitting bill that is designed for speed. One designated payee covers the table’s bill and collects payment from others in the group using the app. The central interaction involves adjusting each person’s portion of the total bill with adjustable bars. Splitsies was featured in Behance's <a href="https://www.appdesignserved.co/gallery/15747585/Splitsies" target="_blank" rel="noopener">App Design Served</a> gallery.
+Splitsies is a no-frills approach to splitting bill that is designed for speed. One designated payee covers the table’s bill and collects payment from others in the group using the app. The central interaction involves adjusting each person’s portion of the total bill with adjustable bars. Splitsies was featured in Behance's <a href="https://www.appdesignserved.co/gallery/15747585/Splitsies">App Design Served</a> gallery.
 
 {% include pic.html file="splitsies_app.png" %}
 

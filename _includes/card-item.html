@@ -1,5 +1,5 @@
 <li class="card-item card-item-category-{{ post.category }} {% if forloop.index > include.postlimit %} initially-hidden-{{ include.group }} hidden{% endif %}">
-  {% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank" rel="noopener"{% endif %}>{% endunless %}
+  {% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %}>{% endunless %}
 		{% unless post.category contains "article" %}
 			<div class="card-image">
 				{% capture postname %}{{ post.title }}{% endcapture %}

@@ -19,7 +19,7 @@ title: Jeff Anders
 	<ul class="card-grid">
 		{% for post in site.categories.project %}
 			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 24 %} initially-hidden-projects hidden{% endif %}">
-  {% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank" rel="noopener"{% endif %}>{% endunless %}
+  {% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %}>{% endunless %}
 			<div class="card-image">
 				{% capture postname %}{{ post.title }}{% endcapture %}
 				{% capture thumbnailpath %}{{ post.url }}{{ post.thumbnail }}{% endcapture %}
@@ -42,7 +42,7 @@ title: Jeff Anders
 	<ul class="two-column">
 		{% for post in site.categories.talk %}
 		<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 8 %} initially-hidden-talks hidden{% endif %}">
-  {% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank" rel="noopener"{% endif %}>{% endunless %}
+  {% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %}>{% endunless %}
 		<div class="card-image">
 			{% capture postname %}{{ post.title }}{% endcapture %}
 			{% capture thumbnailpath %}{{ post.url }}{{ post.thumbnail }}{% endcapture %}
@@ -77,7 +77,7 @@ title: Jeff Anders
 	<ul class="card-grid card-grid-compact">
 	    {% assign sortedlists = site.categories.list | sort: 'title' %}
     	{% for post in sortedlists %}
-			<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank" rel="noopener"{% endif %} class="compact-card">{% include icons/{{ post.thumbnail }}.html %}<h3>{{ post.title }}</h3></a>
+			<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %} class="compact-card">{% include icons/{{ post.thumbnail }}.html %}<h3>{{ post.title }}</h3></a>
 		{% endfor %}
 	</ul>
 </section>
@@ -90,7 +90,7 @@ title: Jeff Anders
 		{% include pic.html file="jeff-canyon.jpeg" class="corner-round" %}
 		<aside>
 			<p>Hi, I'm Jeff Anders! I live in Denver, Colorado, USA with my wife Emily and daughter Nellie. You may know me by my last last name, Hilnbrand.</p>
-			<p>My time is focused on building <a href="https://ambrook.com?ref=jeffanders.co" target="_blank" rel="noopener">Ambrook</a>, the company I founded and lead design at. I'm thinking about design, climate, and fintech right now, and am also really interested in cartography, roller coasters, architecture, energy, cities, photography, travel.</p>
+			<p>My time is focused on building <a href="https://ambrook.com?ref=jeffanders.co">Ambrook</a>, the company I founded and lead design at. I'm thinking about design, climate, and fintech right now, and am also really interested in cartography, roller coasters, architecture, energy, cities, photography, travel.</p>
 			<p>Welcome to my website and portfolio. Explore my works and reach out to me if you'd like to connect!</p>
 		</aside>
 	</div>
@@ -99,7 +99,7 @@ title: Jeff Anders
 		<a id="contact"></a>
 		<ul class="card-grid card-grid-compact contact-grid">
 			{% for contact in site.data.contacts %}
-				<a href="{{ contact.link }}" target="_blank" rel="noopener" class="compact-card">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></a>
+				<a href="{{ contact.link }}" class="compact-card">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></a>
 			{% endfor %}
 		</ul>
 	</div>

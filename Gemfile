@@ -5,5 +5,6 @@ group :jekyll_plugins do
 	gem 'jekyll-press'
 	gem 'jekyll-contentblocks'
 	gem 'jekyll_picture_tag', '~> 2.0'
+	gem 'jekyll-target-blank'
 	gem 'jekyll-sitemap'
 end
