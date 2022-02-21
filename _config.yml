@@ -19,7 +19,9 @@ url: "https://jeffanders.co" # the base hostname & protocol for your site
 picture:
   source: img/
   fast_build: true
-  # disabled: development
+  ignore_missing_images: development
+  suppress_warnings: true
+  disabled: development
 
 # Build info
 incremental: true

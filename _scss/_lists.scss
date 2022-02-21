@@ -192,7 +192,7 @@ ul li.list-item {
 .list-rating-2,
 .list-rating-3 {
 	color: $red !important;
-	border-color: $red-trans;
+	border-color: $red-transparent;
 	transition: $t;
 }
 
@@ -201,6 +201,6 @@ ul li.list-item {
 .list-rating-8,
 .list-rating-7 {
 	color: $green !important;
-	border-color: $green-trans;
+	border-color: $green-transparent;
 	transition: $t;
 }

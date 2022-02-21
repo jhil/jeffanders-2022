@@ -149,7 +149,7 @@ ul.article-list {
 .two-column {
 	@extend .article-columns;
 	grid-template-columns: 1fr 1fr;
-	@media screen and (max-width: $phone-landscape-max) {
+	@media screen and (max-width: $tablet-portrait-max) {
 		grid-template-columns: 1fr;
 	}
 }

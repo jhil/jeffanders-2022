@@ -60,6 +60,9 @@ h1, %h1, .h1 {
 	font-family: $sans;
 	font-weight: $medium;
 	line-height: 1.25;
+	@media screen and (max-width: $phone-portrait-max) {
+		font-size: 2rem;
+	}
 }
 
 h2, %h2, .h2 {

@@ -5,8 +5,11 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	@media screen and (max-width: $tablet-portrait-max) {
+		gap: 1.5rem;
+	}
 	background: $lightest-gray;
-	@media screen and (min-width: $tablet-portrait-min) {
+	@media screen and (min-width: $tablet-landscape-min) {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -14,6 +17,12 @@
 		width: $sidebar-width;
 		height: 100%;
 	}
+}
+
+.mobile-nav-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .sidebar-title {
@@ -30,14 +39,13 @@
 .sidebar-avatar {
 	height: 2.5rem;
 	width: 2.5rem;
-	display: block;
 	background-size: cover;
 	margin-right: 1rem;
 	transition: $t;
 	border-radius: 50%;
-	img {
-		height: 2.5rem;
-		width: 2.5rem;
+	@media screen and (max-width: $phone-portrait-max) {
+		height: 2rem;
+		width: 2rem;	
 	}
 }
 
@@ -47,9 +55,10 @@
 
 .sidebar-social {
 	display: flex;
-	justify-content: space-between;
-	margin: auto -0.75rem -0.75rem;
-	// TODO: fix mobile horizontal overflow
+	@media screen and (min-width: $tablet-landscape-min) {
+		justify-content: space-between;
+		margin: auto -0.75rem -0.75rem;
+	}
 }
 
 .sidebar-social-item {
@@ -70,27 +79,24 @@
 			fill: $dark-gray;
 		}
 	}
-}
-
-.intro {
-	display: grid;
-	grid-row-gap: 0.5rem;
-	.intro-2 {
-		color: $medium-dark-gray;
-	}
-	.intro-3 {
-		color: $medium-gray;
+	@media screen and (max-width: $phone-portrait-max) {
+		padding: 0.5rem;
+		svg {
+			width: 1.25rem;
+			height: 1.25rem;
+		}	
 	}
 }
 
 nav {
 	ul {
 		margin: 0 -3rem;
-		@media screen and (max-width: $phone-landscape-max) {
-			margin: 0;
-			display: flex;
-			flex: wrap;
-		}
+		// @media screen and (max-width: $tablet-portrait-max) {
+		// 	margin: 0;
+		// 	display: flex;
+		// 	justify-content: space-around;
+		// 	flex: wrap;
+		// }
 	}
 	li {
 		font-weight: $demi;
@@ -105,10 +111,10 @@ nav {
 			background: $lighter-gray;
 			transition: $t;
 		}
-		@media screen and (max-width: $phone-landscape-max) {
-			padding: 0;
-			// TODO: make mobile style
-		}
+		// @media screen and (max-width: $tablet-portrait-max) {
+		// 	padding: 0.5rem;
+		// 	margin: 0 -0.5rem;
+		// }
 	}
 }
 

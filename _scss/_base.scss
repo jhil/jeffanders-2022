@@ -29,7 +29,7 @@ body {
 
 .container {
 	display: flex;
-	@media screen and (max-width: $phone-landscape-max) {
+	@media screen and (max-width: $tablet-portrait-max) {
 		display: inline;
 	}
 }
@@ -61,11 +61,14 @@ hr {
 
 .wrapper {
 	padding: 3rem;
+	@media screen and (max-width: $phone-portrait-max) {
+		padding: 1.5rem;
+	}
 }
 
 .content {
 	width: 100%;
-	@media screen and (min-width: $tablet-portrait-min) {
+	@media screen and (min-width: $tablet-landscape-min) {
 		padding-left: $sidebar-width + 3rem;
 	}
 	max-width: 93rem;
@@ -158,7 +161,7 @@ section,
 }
 
 ::selection {
-	background: $black;
+	background: $dark-gray;
 	color: $light-gray;
 }
 
