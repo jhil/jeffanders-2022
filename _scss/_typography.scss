@@ -9,38 +9,35 @@ $light: 300;
 
 @font-face {
 	font-family: 'TT Interphases';
-	src: url('/fonts/TT-Interphases-Regular.otf') format('otf');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+	src: url('/fonts/TT-Interphases-Var-Roman.woff2') format('woff2');
 }
 
-@font-face {
-	font-family: 'TT Interphases';
-	src: url('/fonts/TT-Interphases-Medium.otf') format('otf');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
+// @font-face {
+// 	font-family: 'TT Interphases';
+// 	src: url('/fonts/TT-Interphases-Regular.otf') format('otf');
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
 
-@font-face {
-	font-family: 'TT Interphases';
-	src: url('/fonts/TT-Interphases-DemiBold.otf') format('otf');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
+// @font-face {
+// 	font-family: 'TT Interphases';
+// 	src: url('/fonts/TT-Interphases-Medium.otf') format('otf');
+// 	font-weight: 500;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
 
-@font-face {
-	font-family: 'TT Interphases Mono';
-	src: url('/fonts/TT-Interphases-Mono-Regular.otf') format('otf');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
+// @font-face {
+// 	font-family: 'TT Interphases';
+// 	src: url('/fonts/TT-Interphases-DemiBold.otf') format('otf');
+// 	font-weight: 600;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
 
 $sans: 'TT Interphases', Maison, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-$mono: 'TT Interphases Mono', Inconsolata, 'Source Code Pro', monospace;
+$mono: Inconsolata, 'Source Code Pro', monospace;
 $serif: Georgia, serif;
 
 .mono {
