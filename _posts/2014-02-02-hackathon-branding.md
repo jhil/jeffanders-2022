@@ -1,8 +1,8 @@
 ---
 layout: post
 category: talk
-title: "Hackathon Branding"
-brief: "MLH Hackcon 1"
+brief: "Hackathon Branding"
+title: "MLH Hackcon 1"
 date: 2014-02-02
 thumbnail: hackathon-branding.png
 external: https://youtu.be/cwJNYXlOuYo

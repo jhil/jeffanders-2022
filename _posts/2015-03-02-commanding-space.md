@@ -1,8 +1,8 @@
 ---
 layout: post
 category: talk
-title: "Commanding Space"
-brief: "Shell Talk 030"
+brief: "Commanding Space"
+title: "Shell Talk 030"
 date: 2015-03-02
 thumbnail: commanding-space.png
 color: "#E79E1C"

@@ -1,8 +1,8 @@
 ---
 layout: post
 category: talk
-title: "How to Diff"
-brief: "MLH Hackcon 3"
+brief: "How to Diff"
+title: "MLH Hackcon 3"
 date: 2015-07-19
 thumbnail: how-to-diff.png
 external: https://youtu.be/1RBqRc5UhPY?start=4950

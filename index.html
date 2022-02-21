@@ -7,7 +7,7 @@ title: Jeff Anders
 	<a id="teams" href="/#teams"><h2 class="section-title">Teams</h2></a>
 	<ul class="card-grid card-grid-compact card-grid-compact-medium">
   		{% for team in site.data.teams %}
-			<a href="{{ team.link }}" class="compact-card compact-card-medium"><img src="{{ team.image }}" alt="{{ team.company }} logo"><h3>{{ team.company }}</h3><p class="card-secondary{% unless team.active %} team-past{% endunless %}">{{ team.role }}</p></a>
+			<li class="compact-card compact-card-medium"><a href="{{ team.link }}"><img src="{{ team.image }}" alt="{{ team.company }} logo"><h3>{{ team.company }}</h3><p class="card-secondary{% unless team.active %} team-past{% endunless %}">{{ team.role }}</p></a></li>
 		{% endfor %}
 	</ul>
 </section>
@@ -39,7 +39,7 @@ title: Jeff Anders
 
 <section data-section-id="talk" class="animated-section section-talks">
 	<a id="talks" href="/#talks"><h2 class="section-title">Speaking</h2></a>
-	<ul class="two-column">
+	<ul class="card-grid">
 		{% for post in site.categories.talk %}
 		<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 8 %} initially-hidden-talks hidden{% endif %}">
   {% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %}>{% endunless %}
@@ -49,8 +49,8 @@ title: Jeff Anders
 			{% include pic.html file=thumbnailpath alt=postname params="1:1" %}
 		</div>
 		<div class="card-info">
-			<h3 class="card-brief">{{ post.brief }}</h3>
-			<h3 class="post-title">{{ post.title }}{% if post.external %}<span class="post-external">&ensp;↗</span>{% endif %}</h3>
+			<h3 class="post-title">{{ post.title }}</h3>
+			<h3 class="card-brief">{{ post.brief }}{% if post.external %}<span class="post-external">&ensp;↗</span>{% endif %}</h3>
 		</div>
 	{% unless post.still == true %}</a>{% endunless %}
 </li>
@@ -77,7 +77,7 @@ title: Jeff Anders
 	<ul class="card-grid card-grid-compact">
 	    {% assign sortedlists = site.categories.list | sort: 'title' %}
     	{% for post in sortedlists %}
-			<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %} class="compact-card">{% include icons/{{ post.thumbnail }}.html %}<h3>{{ post.title }}</h3></a>
+			<li class="compact-card"><a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %} >{% include icons/{{ post.thumbnail }}.html %}<h3>{{ post.title }}</h3></a></li>
 		{% endfor %}
 	</ul>
 </section>
@@ -90,16 +90,16 @@ title: Jeff Anders
 		{% include pic.html file="jeff-canyon.jpeg" alt="Jeff in a canyon" class="corner-round" %}
 		<aside>
 			<p>Hi, I'm Jeff Anders! I live in Denver, Colorado, USA with my wife Emily and daughter Nellie. You may know me by my last last name, Hilnbrand.</p>
-			<p>My time is focused on building <a href="https://ambrook.com?ref=jeffanders.co">Ambrook</a>, the company I founded and lead design at. I'm thinking about design, climate, and fintech right now, and am also really interested in cartography, roller coasters, architecture, energy, cities, photography, travel.</p>
+			<p>My time is focused on building <a href="https://ambrook.com?ref=jeffanders.co?ref=jeffanders.co">Ambrook</a>, the company I founded and lead design at. I'm thinking about design, climate, and fintech right now, and am also really interested in cartography, roller coasters, architecture, energy, cities, photography, travel.</p>
 			<p>Welcome to my website and portfolio. Explore my works and reach out to me if you'd like to connect!</p>
 		</aside>
 	</div>
 
 	<div class="section-contact">
-		<a id="contact" href="/#contact"></a>
+		<a id="contact" href="/#contact" class="invisitble"></a>
 		<ul class="card-grid card-grid-compact contact-grid">
 			{% for contact in site.data.contacts %}
-				<a href="{{ contact.link }}" class="compact-card">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></a>
+				<li class="compact-card"><a href="{{ contact.link }}">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></a></li>
 			{% endfor %}
 		</ul>
 	</div>

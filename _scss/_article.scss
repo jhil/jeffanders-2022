@@ -34,7 +34,7 @@ article {
 	max-width: 39rem;
 	transition: $t;
 	a {
-		font-weight: 400;
+		font-variation-settings: 'wght' 450;
 		@extend .underline;
 		transition: $t;
 		&:hover {

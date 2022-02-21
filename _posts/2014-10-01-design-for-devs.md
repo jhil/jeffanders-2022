@@ -1,8 +1,8 @@
 ---
 layout: post
 category: talk
-title: "Design For Devs"
-brief: "Terrapin Hackers Hacktorial"
+brief: "Design For Devs"
+title: "Terrapin Hackers Hacktorial"
 date: 2014-10-01
 thumbnail: design-for-devs.png
 external: https://youtu.be/gaUzufrkEqM

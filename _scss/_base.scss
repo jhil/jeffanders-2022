@@ -53,7 +53,7 @@ $sidebar-width: 18rem;
 
 $limit-teams: 6;
 $limit-projects: 24;
-$limit-talks: 8;
+$limit-talks: 9;
 
 html {
 	height: 100%;
@@ -68,6 +68,7 @@ body {
 	font-family: $sans;
 	font-size: 16px;
 	font-weight: $regular;
+	font-variation-settings: 'wght' 450;
 	line-height: 1.5;
 	text-rendering: optimizeLegibility;
 	@extend .animate-fadein;
@@ -84,6 +85,10 @@ a,
 a:hover {
 	color: inherit;
 	text-decoration: none;
+}
+
+a:target {
+	outline: 0;
 }
 
 img,
@@ -253,6 +258,10 @@ button,
 	display: none !important;
 	opacity: 0;
 	transition: $t;
+}
+
+.invisible {
+	visibility: hidden;
 }
 
 svg {

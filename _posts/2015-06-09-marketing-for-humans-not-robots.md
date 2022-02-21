@@ -1,8 +1,8 @@
 ---
 layout: post
 category: talk
-title: "Marketing For Humans, Not Robots"
-brief: "MLH Hackcon 2"
+brief: "Marketing For Humans, Not Robots"
+title: "MLH Hackcon 2"
 date: 2015-06-09
 thumbnail: marketing-for-humans-not-robots.png
 external: https://youtu.be/VSFN9P1bZtM

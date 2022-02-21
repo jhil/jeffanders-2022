@@ -1,8 +1,8 @@
 ---
 layout: post
 category: talk
-title: "How To Supercharge Your Design Career"
-brief: "Village Global's Venture Stories"
+brief: "Supercharge Your Design Career"
+title: "Village Global's Venture Stories"
 date: 2021-01-12
 thumbnail: village-global.jpeg
 external: https://podcasts.apple.com/in/podcast/how-to-supercharge-your-career-in-design-mindaugas/id1316769266?i=1000505092319

@@ -1,8 +1,8 @@
 ---
 layout: post
 category: talk
-title: "UI Animation + Motion Design"
-brief: "Terrapin Hackers Hacktorial"
+brief: "UI Animation + Motion Design"
+title: "Terrapin Hackers Hacktorial"
 date: 2015-12-03
 thumbnail: ui-animation-motion-design.jpg
 external: https://youtu.be/ubKiOVqsM-o?t=4m10s

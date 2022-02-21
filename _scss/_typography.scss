@@ -15,30 +15,6 @@ $light: 300;
 	font-display: swap;
 }
 
-// @font-face {
-// 	font-family: 'TT Interphases';
-// 	src: url('/fonts/TT-Interphases-Regular.otf') format('otf');
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-
-// @font-face {
-// 	font-family: 'TT Interphases';
-// 	src: url('/fonts/TT-Interphases-Medium.otf') format('otf');
-// 	font-weight: 500;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-
-// @font-face {
-// 	font-family: 'TT Interphases';
-// 	src: url('/fonts/TT-Interphases-DemiBold.otf') format('otf');
-// 	font-weight: 600;
-// 	font-style: normal;
-// 	font-display: swap;
-// }
-
 $sans: 'TT Interphases', Maison, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 $mono: Inconsolata, 'Source Code Pro', monospace;
 $serif: Georgia, serif;
@@ -74,7 +50,7 @@ h2, %h2, .h2 {
 
 h3, %h3, .h3 {
 	@extend .p;
-	font-variation-settings: 'wght' 550;
+	font-variation-settings: 'wght' 520;
 }
 
 h4, %h4, .h4 {
