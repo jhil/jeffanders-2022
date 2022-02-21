@@ -1,11 +1,10 @@
 presets:
   default:
     formats: [webp, original]
-    # widths: [400, 640, 1280, 1600, 1920]
-    widths: [400]
+    widths: [400, 640, 1280, 1600, 1920]
     keep: center
-    quality: 90
+    quality: 100
     format_quality:
-      webp: 90
+      webp: 100
       avif: 90
       jp2: 90
