@@ -67,11 +67,11 @@ hr {
 }
 
 .content {
+	max-width: 93rem;
 	width: 100%;
 	@media screen and (min-width: $tablet-landscape-min) {
 		padding-left: $sidebar-width + 3rem;
 	}
-	max-width: 93rem;
 	margin: 0 auto;
 }
 
@@ -161,7 +161,7 @@ section,
 }
 
 ::selection {
-	background: $dark-gray;
+	background: $black;
 	color: $light-gray;
 }
 
