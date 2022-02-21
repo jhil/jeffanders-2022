@@ -8,7 +8,7 @@ thumbnail: circle-multiple
 
 ## Angel
 
-Emily and I have angel invested small checks in a few startups. We like adding value as advisors and generally being there to support founders. <a href="mailto:jahilnbrand@gmail.com" target="_blank" rel="noopener">Contact me</a> if you'd like to discuss.
+Emily and I have angel invested small checks in a few startups. We like adding value as advisors and generally being there to support founders. <a href="mailto:jahilnbrand@gmail.com" target="_blank" rel="noopener">Contact us</a> if you're raising!
 
 <ul class="card-grid card-grid-compact">
 	{% for investing in site.data.investing %}

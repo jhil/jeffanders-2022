@@ -22,17 +22,17 @@
 	}
 }
 
-@media screen and (max-width: $tablet-landscape-max) {
-	.hide-tablet {
-		display: none;
-	}
-
-}
-
 @media screen and (min-width: $tablet-landscape-min) {
 	.tablet-mobile-only {
 		display: none;
 	}
+}
+
+@media screen and (max-width: $tablet-portrait-max) {
+	.hide-tablet {
+		display: none;
+	}
+
 }
 
 @media screen and (min-width: $tablet-portrait-min) {

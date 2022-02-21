@@ -55,6 +55,7 @@
 
 .sidebar-social {
 	display: flex;
+	margin: -0.5rem;
 	@media screen and (min-width: $tablet-landscape-min) {
 		justify-content: space-between;
 		margin: auto -0.75rem -0.75rem;
@@ -121,8 +122,8 @@ nav {
 .active-dot {
 	opacity: 0;
 	transition: $t;
-	height: 0.5rem;
-	width: 0.5rem;
+	height: 0.25rem;
+	width: 0.25rem;
 	background-color: $medium-gray;
 	border-radius: 50%;
 	display: inline-block;

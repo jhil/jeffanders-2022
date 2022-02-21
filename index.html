@@ -86,7 +86,7 @@ title: Jeff Anders
 
 <section data-section-id="about" class="animated-section section-about">
 	<a id="about"><h2 class="section-title">About</h2></a>
-	<div class="about-hello">
+	<div class="about-me">
 		{% include pic.html file="jeff-canyon.jpeg" class="corner-round" %}
 		<aside>
 			<p>Hi, I'm Jeff Anders! I live in Denver, Colorado, USA with my wife Emily and daughter Nellie. You may know me by my last last name, Hilnbrand.</p>
@@ -94,16 +94,17 @@ title: Jeff Anders
 			<p>Welcome to my website and portfolio. Explore my works and reach out to me if you'd like to connect!</p>
 		</aside>
 	</div>
+
+	<div class="section-contact">
+		<a id="contact"></a>
+		<ul class="card-grid card-grid-compact contact-grid">
+			{% for contact in site.data.contacts %}
+				<a href="{{ contact.link }}" target="_blank" rel="noopener" class="compact-card">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></a>
+			{% endfor %}
+		</ul>
+	</div>
 </section>
 
-<section data-section-id="contact" class="animated-section section-contact">
-	<a id="contact"></a>
-	<ul class="card-grid card-grid-compact contact-grid">
-		{% for contact in site.data.contacts %}
-			<a href="{{ contact.link }}" target="_blank" rel="noopener" class="compact-card">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></a>
-		{% endfor %}
-	</ul>
-</section>
 
 <!-- Javascript -->
 <script type="text/javascript" src="/js/hidden.js"></script>
