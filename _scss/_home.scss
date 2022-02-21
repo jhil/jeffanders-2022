@@ -101,7 +101,7 @@
 
 .team-past {
 	text-decoration: line-through;
-	text-decoration-color: $lightest-gray;
+	text-decoration-color: $light-gray;
 	text-decoration-thickness: 2px;
 }
 
@@ -147,7 +147,7 @@ svg {
 }
 
 .button-more {
-	color: $medium-dark-gray;
+	color: $dark-gray;
 	margin-top: 3rem;
 	&::after {
 		content: "⇣";

@@ -4,7 +4,7 @@ title: Jeff Anders
 ---
 
 <section data-section-id="team" class="animated-section section-teams">
-	<a id="teams"><h2 class="section-title">Teams</h2></a>
+	<a id="teams" href="/#teams"><h2 class="section-title">Teams</h2></a>
 	<ul class="card-grid card-grid-compact card-grid-compact-medium">
   		{% for team in site.data.teams %}
 			<a href="{{ team.link }}" class="compact-card compact-card-medium"><img src="{{ team.image }}" alt="{{ team.company }} logo"><h3>{{ team.company }}</h3><p class="card-secondary{% unless team.active %} team-past{% endunless %}">{{ team.role }}</p></a>
@@ -15,7 +15,7 @@ title: Jeff Anders
 <hr>
 
 <section data-section-id="project" class="animated-section section-projects">
-	<a id="projects"><h2 class="section-title">Projects</h2></a>
+	<a id="projects" href="/#projects"><h2 class="section-title">Projects</h2></a>
 	<ul class="card-grid">
 		{% for post in site.categories.project %}
 			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 24 %} initially-hidden-projects hidden{% endif %}">
@@ -38,7 +38,7 @@ title: Jeff Anders
 <hr>
 
 <section data-section-id="talk" class="animated-section section-talks">
-	<a id="talks"><h2 class="section-title">Talks & Publications</h2></a>
+	<a id="talks" href="/#talks"><h2 class="section-title">Speaking</h2></a>
 	<ul class="two-column">
 		{% for post in site.categories.talk %}
 		<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 8 %} initially-hidden-talks hidden{% endif %}">
@@ -62,7 +62,7 @@ title: Jeff Anders
 <hr>
 
 {% comment %} <section data-section-id="article" class="animated-section section-writing">
-	<a id="writing"><h2 class="section-title">Writing</h2></a>
+	<a id="writing" href="/#writing"><h2 class="section-title">Writing</h2></a>
 	<ul class="two-column">
 		{% for post in site.categories.article %}
 			{% include card-item.html %}
@@ -73,7 +73,7 @@ title: Jeff Anders
 <hr> {% endcomment %}
 
 <section data-section-id="list" class="animated-section section-lists">
-	<a id="lists"><h2 class="section-title">Lists</h2></a>
+	<a id="lists" href="/#lists" ><h2 class="section-title">Lists</h2></a>
 	<ul class="card-grid card-grid-compact">
 	    {% assign sortedlists = site.categories.list | sort: 'title' %}
     	{% for post in sortedlists %}
@@ -85,9 +85,9 @@ title: Jeff Anders
 <hr>
 
 <section data-section-id="about" class="animated-section section-about">
-	<a id="about"><h2 class="section-title">About</h2></a>
+	<a id="about" href="/#about"><h2 class="section-title">About</h2></a>
 	<div class="about-me">
-		{% include pic.html file="jeff-canyon.jpeg" class="corner-round" %}
+		{% include pic.html file="jeff-canyon.jpeg" alt="Jeff in a canyon" class="corner-round" %}
 		<aside>
 			<p>Hi, I'm Jeff Anders! I live in Denver, Colorado, USA with my wife Emily and daughter Nellie. You may know me by my last last name, Hilnbrand.</p>
 			<p>My time is focused on building <a href="https://ambrook.com?ref=jeffanders.co">Ambrook</a>, the company I founded and lead design at. I'm thinking about design, climate, and fintech right now, and am also really interested in cartography, roller coasters, architecture, energy, cities, photography, travel.</p>
@@ -96,7 +96,7 @@ title: Jeff Anders
 	</div>
 
 	<div class="section-contact">
-		<a id="contact"></a>
+		<a id="contact" href="/#contact"></a>
 		<ul class="card-grid card-grid-compact contact-grid">
 			{% for contact in site.data.contacts %}
 				<a href="{{ contact.link }}" class="compact-card">{% include icons/{{ contact.icon }}.html %}<h3>{{ contact.name }}</h3><p class="card-secondary">{{ contact.handle }}</p></a>

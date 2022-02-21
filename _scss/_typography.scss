@@ -12,6 +12,7 @@ $light: 300;
 	src: url('/fonts/TT-Interphases-Var-Roman.woff2') format('woff2'),
 		url('/fonts/TT-Interphases-Var-Roman.woff') format('woff'),
 		url('/fonts/TT-Interphases-Var-Roman.ttf') format('truetype');
+	font-display: swap;
 }
 
 // @font-face {
