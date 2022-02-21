@@ -15,13 +15,16 @@ highlighter: pygments
 permalink: "/:title/"
 url: "https://jeffanders.co" # the base hostname & protocol for your site
 
+plugins:
+  - jekyll-sitemap
+
 # Jekyll Picture Tag
 picture:
   source: img/
   fast_build: true
   ignore_missing_images: development
-  # suppress_warnings: true
-  # disabled: development
+  suppress_warnings: true
+  disabled: development
 
 # Build info
 incremental: true

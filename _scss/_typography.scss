@@ -9,7 +9,9 @@ $light: 300;
 
 @font-face {
 	font-family: 'TT Interphases';
-	src: url('/fonts/TT-Interphases-Var-Roman.woff2') format('woff2');
+	src: url('/fonts/TT-Interphases-Var-Roman.woff2') format('woff2'),
+		url('/fonts/TT-Interphases-Var-Roman.woff') format('woff'),
+		url('/fonts/TT-Interphases-Var-Roman.ttf') format('truetype');
 }
 
 // @font-face {
