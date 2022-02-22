@@ -6,13 +6,13 @@ title: Jeff Anders
 <!-- Teams Section -->
 
 <section data-section-id="team" class="animated-section section-teams">
-	<div>
+	<div class="section-header">
 		<a id="teams" href="/#teams"><h2 class="section-title">Teams</h2></a>
-		<button data-group="teams" class="button-more button-link initially-hidden-projects">More Teams</button>
+		<button data-group="teams" class="button-more button-link initially-hidden-teams">More Teams</button>
 	</div>
 	<ul class="card-grid card-grid-compact card-grid-compact-medium">
   		{% for team in site.data.teams %}
-			<li class="compact-card compact-card-medium">
+			<li class="compact-card compact-card-medium card-item-category-team {% if forloop.index > 2 %} initially-hidden-teams hidden{% endif %}">
 				<a href="{{ team.link }}">
 					<img src="{{ team.image }}" alt="{{ team.company }} logo">
 					<h3>{{ team.company }}</h3>

@@ -257,7 +257,7 @@ button,
 }
 
 .hidden {
-	display: none !important;
+	display: none;
 	opacity: 0;
 	transition: $t;
 }
