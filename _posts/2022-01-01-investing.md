@@ -13,7 +13,11 @@ Emily and I have angel invested small checks in a few startups. We like adding v
 <ul class="card-grid card-grid-compact">
 	{% for investing in site.data.investing %}
 	{% if investing.type contains "angel" %}
-		<a href="{{ investing.link }}"><li class="compact-card compact-card-medium"><img src="{{ investing.image }}" alt="{{ investing.company }} logo"><h3>{{ investing.company }}</h3><p class="card-secondary">{{ investing.round }}</p></li></a>
+		<li class="compact-card compact-card-medium"><a href="{{ investing.link }}">
+			<img src="{{ investing.image }}" alt="{{ investing.company }} logo">
+			<h3>{{ investing.company }}</h3>
+			<p class="card-secondary">{{ investing.round }}</p>
+		</a></li>
 	{% endif %}
 	{% endfor %}
 </ul>
@@ -23,7 +27,10 @@ Emily and I have angel invested small checks in a few startups. We like adding v
 <ul class="card-grid card-grid-compact">
 	{% for investing in site.data.investing %}
 	{% if investing.type contains "crowdfunding" %}
-		<a href="{{ investing.link }}"><li class="compact-card compact-card-medium"><img src="{{ investing.image }}" alt="{{ investing.company }} logo"><h3>{{ investing.company }}</h3></li></a>
+		<li class="compact-card compact-card-medium"><a href="{{ investing.link }}">
+			<img src="{{ investing.image }}" alt="{{ investing.company }} logo">
+			<h3>{{ investing.company }}</h3>
+		</a></li>
 	{% endif %}
 	{% endfor %}
 </ul>
