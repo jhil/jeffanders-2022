@@ -92,19 +92,13 @@
 nav {
 	ul {
 		margin: 0 -3rem;
-		// @media screen and (max-width: $tablet-portrait-max) {
-		// 	margin: 0;
-		// 	display: flex;
-		// 	justify-content: space-around;
-		// 	flex: wrap;
-		// }
 	}
 	li {
 		font-variation-settings: 'wght' 550;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1rem 3rem;
+		padding: 1.5rem 3rem;
 		color: $dark-gray;
 		transition: $t-fast;
 		&:hover {
@@ -119,14 +113,13 @@ nav {
 	}
 }
 
-.active-dot {
+.active-tab {
+	&::after {
+		content: "›";
+	}
 	opacity: 0;
 	transition: $t;
-	height: 0.25rem;
-	width: 0.25rem;
-	background-color: $medium-gray;
-	border-radius: 50%;
-	display: inline-block;
+	color: $medium-gray;
 }
 
 .in-section-team .nav-team,
@@ -139,7 +132,7 @@ nav {
 	li {
 		background: $white;
 		color: $black;
-		.active-dot {
+		.active-tab {
 			opacity: 1;
 		}
 	}
