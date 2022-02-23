@@ -63,6 +63,7 @@ html {
 }
 
 body {
+	background: $white;
 	height: 100%;
 	color: $black;
 	font-family: $sans;
@@ -120,6 +121,7 @@ hr {
 }
 
 .content {
+	background: $white;
 	@media screen and (min-width: $tablet-landscape-min) {
 		padding-left: $sidebar-width + 3rem;
 	}
