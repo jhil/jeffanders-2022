@@ -14,7 +14,9 @@ title: Jeff Anders
   		{% for team in site.data.teams %}
 			<li class="compact-card compact-card-medium card-item-category-team {% if forloop.index > 2 %} initially-hidden-teams hidden{% endif %}">
 				<a href="{{ team.link }}">
-					<img src="{{ team.image }}" alt="{{ team.company }} logo">
+					{% capture teamname %}{{ team.company }}{% endcapture %}
+					{% capture teamiconpath %}{{ team.image }}{% endcapture %}
+					{% include pic.html file=teamiconpath alt=teamname params="1:1" %}
 					<h3>{{ team.company }}</h3>
 					<p class="card-secondary{% if team.active %} team-active{% endif %}">{{ team.role }}</p>
 				</a>
