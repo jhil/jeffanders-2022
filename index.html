@@ -33,7 +33,7 @@ title: Jeff Anders
 	<a id="projects" href="/#projects"><h2 class="section-title">Projects</h2></a>
 	<ul class="card-grid">
 		{% for post in site.categories.project %}
-			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 24 %} initially-hidden-projects hidden{% endif %}">
+			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 12 %} initially-hidden-projects hidden{% endif %}">
 				{% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %}>{% endunless %}
 				<div class="card-image">
 					{% capture postname %}{{ post.title }}{% endcapture %}
@@ -58,7 +58,7 @@ title: Jeff Anders
 	<a id="talks" href="/#talks"><h2 class="section-title">Speaking</h2></a>
 	<ul class="card-grid">
 		{% for post in site.categories.talk %}
-			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 9 %} initially-hidden-talks hidden{% endif %}">
+			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 4 %} initially-hidden-talks hidden{% endif %}">
 				{% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %}>{% endunless %}
 					<div class="card-image">
 						{% capture postname %}{{ post.title }}{% endcapture %}

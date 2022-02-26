@@ -250,10 +250,21 @@ svg {
 			animation-delay: 100ms * $project1;
 		}
 	}
-	@for $project2 from calc($limit-projects + 1) through 32 {
+	@for $project2 from 13 through 32 {
 		&:nth-child(#{$project2}) {
-			animation-delay: 100ms * $project2 - $limit-projects * 100ms;
+			animation-delay: 100ms * $project2 - 12 * 100ms;
 		}
+	}
+	@media screen and (min-width: $laptop-min) {
+		&:nth-child(n+13):nth-child(-n+24) {
+			display: block;
+			opacity: 1;
+		}
+		@for $project3 from calc($limit-projects + 1) through 32 {
+			&:nth-child(#{$project3}) {
+				animation-delay: 100ms * $project3 - $limit-projects * 100ms;
+			}
+		}	
 	}
 }
 
@@ -264,11 +275,23 @@ svg {
 			animation-delay: 100ms * $team1;
 		}
 	}
-	@for $team2 from calc($limit-talks + 1) through 32 {
+	@for $team2 from 5 through 32 {
 		&:nth-child(#{$team2}) {
-			animation-delay: 100ms * $team2 - $limit-talks * 100ms;
+			animation-delay: 100ms * $team2 - 4 * 100ms;
 		}
 	}
+	@media screen and (min-width: $laptop-min) {
+		&:nth-child(n+5):nth-child(-n+9) {
+			display: block;
+			opacity: 1;
+		}
+		@for $talk3 from calc($limit-projects + 1) through 32 {
+			&:nth-child(#{$talk3}) {
+				animation-delay: 100ms * $talk3 - $limit-projects * 100ms;
+			}
+		}	
+	}
+
 }
 
 .section-lists .compact-card {
