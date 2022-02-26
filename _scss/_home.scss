@@ -166,7 +166,11 @@ svg {
 .button-more {
 	color: $dark-gray;
 	margin-top: 3rem;
-	&::after {
+	&:hover {
+		transform: translateY(4px);
+		box-shadow: 0 -4px 0 $light-gray;
+	}
+	&:after {
 		content: "⇣";
 		margin-left: 1rem;
 	}

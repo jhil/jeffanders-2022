@@ -1,0 +1,24 @@
+<footer>
+
+	<div class="footer-side">
+		{% comment %} <p>🄯&ensp;Jeff Anders</p> {% endcomment %}
+		<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+			<option>v.2022</option>
+			<option value="https://jeffanders-2021.netlify.com/">v.2021</option>
+			<option value="https://jhilco-2014.netlify.com/">v.2014</option>
+			<option value="https://jhilco-2013.netlify.com/">v.2013</option>
+		</select>
+	</div>
+
+	<div class="footer-side">
+		<a class="icon-link" href="/colophon">
+			<div class="circle-icon">{% include icons/script-outline.html %}</div>
+			<p>Colophon</p>
+		</a>
+		<a class="icon-link" href="https://github.com/jhil/jeffanders-2022">
+			<div class="circle-icon">{% include icons/github.html %}</div>
+			<p>Source</p>
+		</a>
+	</div>
+
+</footer>

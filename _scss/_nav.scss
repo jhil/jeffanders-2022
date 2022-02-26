@@ -55,37 +55,9 @@
 
 .sidebar-social {
 	display: flex;
-	margin: -0.5rem;
 	@media screen and (min-width: $tablet-landscape-min) {
 		justify-content: space-between;
-		margin: auto -0.75rem -0.75rem;
-	}
-}
-
-.sidebar-social-item {
-	padding: 0.75rem;
-	transition: $t;
-	border-radius: 50%;
-	svg {
-		width: 1.5rem;
-		height: 1.5rem;
-		path {
-			transition: $t;
-			fill: $medium-gray;
-		}
-	}
-	&:hover {
-		background: $lighter-gray;
-		svg path {
-			fill: $dark-gray;
-		}
-	}
-	@media screen and (max-width: $phone-portrait-max) {
-		padding: 0.5rem;
-		svg {
-			width: 1.25rem;
-			height: 1.25rem;
-		}	
+		margin: auto 0 0;
 	}
 }
 

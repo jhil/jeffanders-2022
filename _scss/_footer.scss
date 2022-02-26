@@ -1,0 +1,12 @@
+footer {
+	display: flex;
+	align-items: center;
+	color: $medium-gray;
+	justify-content: space-between;
+}
+
+.footer-side {
+	display: flex;
+	gap: 3rem;
+	align-items: center;
+}
