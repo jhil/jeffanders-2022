@@ -16,7 +16,7 @@ title: Jeff Anders
 				<a href="{{ team.link }}">
 					{% capture teamname %}{{ team.company }}{% endcapture %}
 					{% capture teamiconpath %}{{ team.image }}{% endcapture %}
-					{% include pic.html file=teamiconpath alt=teamname params="1:1" %}
+					{% include pic.html param="square" file=teamiconpath alt=teamname %}
 					<h3>{{ team.company }}</h3>
 					<p class="card-secondary{% if team.active %} team-active{% endif %}">{{ team.role }}</p>
 				</a>
@@ -63,7 +63,7 @@ title: Jeff Anders
 					<div class="card-image">
 						{% capture postname %}{{ post.title }}{% endcapture %}
 						{% capture thumbnailpath %}{{ post.url }}{{ post.thumbnail }}{% endcapture %}
-						{% include pic.html file=thumbnailpath alt=postname params="1:1" %}
+						{% include pic.html param="square" file=thumbnailpath alt=postname %}
 					</div>
 					<div class="card-info">
 						<h3 class="post-title">{{ post.title }}</h3>

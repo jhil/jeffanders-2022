@@ -1,6 +1,15 @@
 presets:
   default:
     formats: [webp, original]
-    widths: [192, 480, 640, 1280, 1600, 1920]
+    widths: [640, 1280, 1600, 1920]
     keep: center
     quality: 85
+    # dimension_attributes: true
+  square:
+    formats: [webp, original]
+    widths: [48,192,480]
+    keep: center
+    quality: 85
+    crop: '1:1'
+    # dimension_attributes: true
+

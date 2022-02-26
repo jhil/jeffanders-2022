@@ -1,9 +1,11 @@
 company,role,color,image,link,active
-Ambrook,Co-Founder,#376150,/img/teams/ambrook-icon.png,https://ambrook.com?ref=jeffanders.co,true
-Scale,Design Manager,#8B7EB9,/img/teams/scale-icon.png,https://scale.com
-Meta,Product Designer,#1877f2,/img/teams/meta-icon.png,https://design.facebook.co
-Minimill,Co-Founder,#3399FF,/img/teams/minimill-icon.png,https://minimill.co
-Autodesk,Product,#333333,/img/teams/autodesk-icon.png,https://autodesk.com
-Venmo,Design,#0288FF,/img/teams/venmo-icon.png,https://venmo.com
-Interact,Design Lead,#6E6E6E,/img/teams/interact-icon.png,https://joininteract.com
-U of Maryland,Alum,#E11933,/img/teams/u-of-maryland-icon.png,https://umd.edu
+Ambrook,Co-Founder,#376150,/teams/ambrook-icon.png,https://ambrook.com?ref=jeffanders.co,true
+Scale,Design Manager,#8B7EB9,/teams/scale-icon.png,https://scale.com
+Meta,Product Designer,#1877f2,/teams/meta-icon.png,https://design.facebook.co
+Minimill,Co-Founder,#3399FF,/teams/minimill-icon.png,https://minimill.co
+Autodesk,Product,#333333,/teams/autodesk-icon.png,https://autodesk.com
+Venmo,Design,#0288FF,/teams/venmo-icon.png,https://venmo.com
+Interact,Design Lead,#6E6E6E,/teams/interact-icon.png,https://joininteract.com
+JHil Media Design,Founder,#39B14B,/teams/jhilmediadesign-icon.png
+Hyperion,Engineering,#384677,/teams/hyperion-icon.png,http://www.hyperiontechnologies.us/
+U of Maryland,Alum,#E11933,/teams/umd-icon.png,https://umd.edu

@@ -25,6 +25,7 @@ picture:
   source: img/
   fast_build: true
   suppress_warnings: true
+  ignore_missing_images: development
   # disabled: development
 
 # Build info
