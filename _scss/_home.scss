@@ -7,12 +7,8 @@
 	.section-title {
 		margin-bottom: 0;
 	}
-	button {
-		margin: -1rem 0;
-		background-color: $transparent;
-		color: $medium-gray;
-	}
 }
+
 .section-title {
 	margin-bottom: 3rem;
 	cursor: text;
@@ -49,11 +45,11 @@
 	.card-brief {
 		@extend .p;
 		transition: $t;
-		color: $medium-gray;
+		color: var(--medium-gray);
 	}
 	.post-external {
 		@extend .p;
-		color: $medium-gray;
+		color: var(--medium-gray);
 		opacity: 0;
 		transition: $t;
 	}
@@ -62,7 +58,7 @@
 			@extend .hover-shadow;
 		}
 		.card-brief {
-			color: $black;
+			color: var(--black);
 			transition: $t;
 		}
 		.post-external {
@@ -119,7 +115,7 @@
 // teams
 
 .team-active {
-	color: $dark-gray !important;
+	color: var(--dark-gray) !important;
 }
 
 .card-grid-compact {
@@ -129,7 +125,7 @@
 
 .compact-card a {
 	display: flex;
-	background: $lightest-gray;
+	background: var(--lightest-gray);
 	border-radius: $corner-radius;
 	padding: 1rem;
 	align-items: center;
@@ -137,7 +133,7 @@
 	&:hover {
 		@extend .hover-shadow;
 		.card-secondary {
-			color: $black;
+			color: var(--black);
 		}
 	}
 	h3 {
@@ -159,16 +155,16 @@ svg {
 }
 
 .card-secondary {
-	color: $medium-gray;
+	color: var(--medium-gray);
 	transition: $t;
 }
 
 .button-more {
-	color: $dark-gray;
+	color: var(--dark-gray);
 	margin-top: 3rem;
 	&:hover {
 		transform: translateY(4px);
-		box-shadow: 0 -4px 0 $light-gray;
+		box-shadow: 0 -4px 0 var(--light-gray);
 	}
 	&:after {
 		content: "⇣";
@@ -176,8 +172,14 @@ svg {
 	}
 	&:active {
 		transform: translateY(8px);
-		box-shadow: 0 -8px 0 $light-gray;
+		box-shadow: 0 -8px 0 var(--light-gray);
 	}
+}
+
+.text-button {
+	margin: -1rem 0;
+	background-color: $transparent;
+	color: var(--medium-gray);
 }
 
 .about-me {
@@ -295,6 +297,9 @@ svg {
 }
 
 .section-lists .compact-card {
+	svg {
+		fill: var(--black)
+	}
 	@extend .animate-together;
 	@for $list1 from 1 through 6 {
 		&:nth-child(#{$list1}) {
@@ -309,5 +314,11 @@ svg {
 		&:nth-child(#{$contact1}) {
 			animation-delay: 100ms * $contact1;
 		}
+	}
+}
+
+[data-theme='dark'] .dark-contact {
+	svg path {
+		fill: var(--dark-gray);
 	}
 }

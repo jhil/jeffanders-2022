@@ -13,10 +13,9 @@ article {
 	@extend .grid-container;
 	justify-content: space-between;
 	align-items: center;
-	color: $dark-gray;
+	color: var(--dark-gray);
 	.button-link {
 		grid-column: 5 / 7;
-		display: flex;
 		justify-content: space-between;	
 	}
 }
@@ -37,12 +36,12 @@ article {
 		@extend .underline;
 		transition: $t;
 		&:hover {
-			color: $medium-gray;
+			color: var(--medium-gray);
 			transition: $t;
 		}
 	}
 	&:hover {
-		color: $black;
+		color: var(--black);
 		transition: $t;
 	}
 }
@@ -59,7 +58,7 @@ article {
 	p a {
 		@extend .underline;
 		&:hover {
-			color: $dark-gray;
+			color: var(--dark-gray);
 		}
 	}
 
@@ -85,9 +84,9 @@ article {
 	}
 	blockquote p {
 		padding: 0.25rem 0 0.25rem 2rem;
-		border-left: 4px $light-gray solid;
+		border-left: 4px var(--light-gray) solid;
 		margin: 1.5rem 0;
-		color: $dark-gray;
+		color: var(--dark-gray);
 	}
 	p em {
 		font-style: italic;

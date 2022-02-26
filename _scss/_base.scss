@@ -63,9 +63,9 @@ html {
 }
 
 body {
-	background: $white;
+	background: var(--white);
 	height: 100%;
-	color: $black;
+	color: var(--black);
 	font-family: $sans;
 	font-size: 16px;
 	font-weight: $regular;
@@ -109,7 +109,7 @@ picture {
 hr {
 	margin: 3rem 0;
 	border: 0;
-	border-bottom: 2px $lighter-gray solid;
+	border-bottom: 2px var(--lighter-gray) solid;
 }
 
 .wrapper {
@@ -121,7 +121,7 @@ hr {
 }
 
 .content {
-	background: $white;
+	background: var(--white);
 	@media screen and (min-width: $tablet-landscape-min) {
 		padding-left: $sidebar-width + 3rem;
 	}
@@ -211,7 +211,7 @@ section,
 
 .underline {
 	text-decoration: underline;
-	text-decoration-color: $light-gray;
+	text-decoration-color: var(--light-gray);
 }
 
 .nowrap {
@@ -223,32 +223,35 @@ section,
 }
 
 ::selection {
-	background: $black;
-	color: $light-gray;
+	background: var(--black);
+	color: var(--light-gray);
 }
 
 button,
 .button-link {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
 	@extend .p;
 	cursor: pointer;
 	outline: none;
 	border: none;
 	padding: 0.75rem 1.5rem;
-	background: $lighter-gray;
+	background: var(--lighter-gray);
+	color: var(--black);
 	border-radius: $corner-radius;
 	transition: $t;
 	span:last-of-type {
 		margin-left: 1.5rem;
 	}
 	&:hover {
-		background: $light-gray;
+		background: var(--light-gray);
 		transform: translateY(-4px);
-		box-shadow: 0 4px 0 $light-gray;
-		color: $black;
+		box-shadow: 0 4px 0 var(--light-gray);
 	}
 	&:active {
 		transform: translateY(-2px);
-		box-shadow: 0 2px 0 $light-gray;
+		box-shadow: 0 2px 0 var(--light-gray);
 	}
 }
 
@@ -274,8 +277,9 @@ svg {
 
 select {
 	@extend .p;
+	background-color: var(--white);
 	cursor: pointer;
-	color: $medium-gray;
+	color: var(--medium-gray);
 	outline: none;
 	padding: 0.25rem;
 	margin: 0 -0.25rem;
@@ -283,12 +287,12 @@ select {
 	border-radius: $corner-radius;
 	transition: $t;
 	&:hover {
-		background: $lighter-gray;
-		color: $black;
+		background: var(--lighter-gray);
+		color: var(--black);
 	}
 	&:active {
 		transform: translateY(-2px);
-		box-shadow: 0 2px 0 $light-gray;
+		box-shadow: 0 2px 0 var(--light-gray);
 	}
 }
 
@@ -307,7 +311,7 @@ select > option {
 	}
 	svg path {
 		transition: $t;
-		fill: $medium-gray;
+		fill: var(--medium-gray);
 	}
 	@media screen and (max-width: $tablet-portrait-max) {
 		padding: 0.5rem;
@@ -324,13 +328,27 @@ select > option {
 	gap: 1rem;
 	align-items: center;
 	transition: $t;
+	cursor: pointer;
 	&:hover {
-		color: $dark-gray;
+		color: var(--dark-gray);
 		.circle-icon {
-			background: $lighter-gray;
+			background: var(--lighter-gray);
 		}
 		path {
-			fill: $dark-gray;
+			fill: var(--dark-gray);
+		}
+	}
+}
+
+.external-hover {
+	p:after {
+		content: " ↗";
+		opacity: 0;
+		transition: $t;
+	}
+	&:hover {
+		p:after {
+		opacity: 1;
 		}
 	}
 }

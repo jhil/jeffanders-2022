@@ -8,7 +8,7 @@ title: Jeff Anders
 <section data-section-id="team" class="animated-section section-teams">
 	<div class="section-header">
 		<a id="teams" href="/#teams"><h2 class="section-title">Teams</h2></a>
-		<button data-group="teams" class="button-more button-link initially-hidden-teams">More</button>
+		<button data-group="teams" class="button-more button-link text-button initially-hidden-teams">More</button>
 	</div>
 	<ul class="card-grid card-grid-compact card-grid-compact-medium">
   		{% for team in site.data.teams %}
@@ -122,7 +122,7 @@ title: Jeff Anders
 		<a id="contact" href="/#contact" class="invisitble"></a>
 		<ul class="card-grid card-grid-compact contact-grid">
 			{% for contact in site.data.contacts %}
-				<li class="compact-card">
+				<li class="compact-card {% if contact.dark contains "true" %}dark-contact{% endif %}">
 					<a href="{{ contact.link }}">{% include_cached icons/{{ contact.icon }}.html %}
 						<h3>{{ contact.name }}</h3>
 						<p class="card-secondary">{{ contact.handle }}</p>
