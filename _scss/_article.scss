@@ -1,5 +1,5 @@
 article {
-	display: flex;
+	display: grid;
 	gap: 3rem;
 }
 
@@ -139,7 +139,7 @@ ul.article-list {
 }
 
 .article-columns {
-	display: flex;
+	display: grid;
 	gap: 3rem;
 	& > picture {
 		margin: 0;
