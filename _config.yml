@@ -16,7 +16,6 @@ permalink: "/:title/"
 url: "https://jeffanders.co" # the base hostname & protocol for your site
 
 plugins:
-  # - inline_svg
   - jekyll-target-blank
   - jekyll-include-cache
   - jekyll-sitemap
@@ -26,7 +25,7 @@ picture:
   source: img/
   fast_build: true
   suppress_warnings: true
-  disabled: development
+  # disabled: development
 
 # Build info
 incremental: true
