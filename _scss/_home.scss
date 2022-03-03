@@ -277,7 +277,7 @@ svg {
 		}
 	}
 	@media screen and (min-width: $laptop-min) {
-		&:nth-child(n+5):nth-child(-n+9) {
+		&:nth-child(n+5):nth-child(-n+6) {
 			display: block;
 			opacity: 1;
 		}
