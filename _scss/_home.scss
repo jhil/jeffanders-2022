@@ -17,18 +17,27 @@
 
 .card-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 3rem;
 	transition: $t;
 	picture, img, p, h3, h2, h1 {
 		margin-bottom: 0;
 		margin-top: 0;
 	}
+	@media screen and (max-width: $desktop-max) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@media screen and (max-width: $laptop-max) {
+		grid-template-columns: 1fr 1fr;
+	}
 	@media screen and (max-width: $tablet-landscape-max) {
-		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+		grid-template-columns: 1fr;
 	}
 	@media screen and (max-width: $tablet-portrait-max) {
-		grid-template-columns: repeat(auto-fit, minmax(1fr));
+		grid-template-columns: 1fr 1fr;
+	}
+	@media screen and (max-width: $phone-landscape-max) {
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -116,7 +125,6 @@
 
 .card-grid-compact {
 	row-gap: 2rem;
-	// grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
 }
 
 .compact-card a {
@@ -181,15 +189,22 @@ svg {
 	@extend .card-grid;
 
 	margin-bottom: 3rem;
-	picture {
-		@media screen and (max-width: $tablet-portrait-max) {
-			grid-column: span 2;
-		}
-	}
 	aside {
 		max-width: 39rem;
-		grid-column: span 2;
+		@media screen and (min-width: $desktop-min) {
+			grid-column: span 2;
+		}
+		p {
+			margin-bottom: 0.5rem;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
 	}
+	@media screen and (max-width: $tablet-portrait-max) {
+		grid-template-columns: 1fr;
+	}
+
 }
 
 .card-item-category-team {
@@ -264,7 +279,7 @@ svg {
 		}
 	}
 	@media screen and (min-width: $laptop-min) {
-		&:nth-child(n+5):nth-child(-n+9) {
+		&:nth-child(n+5):nth-child(-n+6) {
 			display: block;
 			opacity: 1;
 		}
