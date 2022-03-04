@@ -31,9 +31,6 @@ picture:
 # Build info
 incremental: true
 
-liquid:
-  error_mode: lax
-
 include:
   - _redirects
 
