@@ -1,20 +1,32 @@
-$black: #222222;
-$dark-gray: #555555;
-$medium-gray: #888888;
-$light-gray: #DDDDDD;
-$lighter-gray: #EEEEEE;
-$lightest-gray: #F7F7F7;
-$white: #FFFFFF;
+html:root {
+	--black: #222222;
+	--dark-gray: #555555;
+	--medium-gray: #888888;
+	--light-gray: #DDDDDD;
+	--lighter-gray: #EEEEEE;
+	--lightest-gray: #F7F7F7;
+	--white: #FFFFFF;
+}
 
+html[data-theme='light'] {
+	--black: #222222;
+	--dark-gray: #555555;
+	--medium-gray: #888888;
+	--light-gray: #DDDDDD;
+	--lighter-gray: #EEEEEE;
+	--lightest-gray: #F7F7F7;
+	--white: #FFFFFF;
+}
 
-// $black: #FFFFFF;
-// $dark-gray: #F7F7F7;
-// $medium-gray: #EEEEEE;
-// $light-gray: #DDDDDD;
-// $lighter-gray: #888888;
-// $lightest-gray: #555555;
-// $white: #222222;
-
+html[data-theme='dark'] {
+	--black: #FFFFFF;
+	--dark-gray: #CCCCCC;
+	--medium-gray: #999999;
+	--light-gray: #777777;
+	--lighter-gray: #555555;
+	--lightest-gray: #333333;
+	--white: #222222;
+}
 
 $transparent: rgba(0, 0, 0, 0);
 
@@ -24,3 +36,34 @@ $red: #FF4C4C;
 
 $green-transparent: rgba(61,204,61,.5);
 $red-transparent: rgba(255,76,76,.5);
+
+
+// Dark Mode
+[data-theme='light'] .theme-toggle-dark,
+[data-theme='dark'] .theme-toggle-light {
+    display: none;
+}
+
+[data-theme='light'] .theme-toggle {
+	p:before {
+		content: "Light ";
+	}
+}
+
+[data-theme='dark'] .theme-toggle {
+	p:before {
+		content: "Dark ";
+	}
+}
+
+.theme-toggle:hover {
+	p:before {
+		content: "Switch "
+	}
+	.theme-toggle-light {
+		background: rgba(255,235,128,0.4) !important;
+	}
+	.theme-toggle-dark {
+		background: rgba(128,138,255,0.3) !important;
+	}
+}

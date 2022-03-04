@@ -96,7 +96,7 @@ ul li.list-item {
 
 .list-detail {
 	em {
-		color: $dark-gray;
+		color: var(--dark-gray);
 	}
 }
 
@@ -112,8 +112,7 @@ ul li.list-item {
 .list-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-	row-gap: 3rem;
-	column-gap: 3rem;
+	gap: 3rem;
 	.list-item {
 		text-align: center;
 		margin-bottom: 0;
@@ -124,7 +123,7 @@ ul li.list-item {
 			margin-bottom: 0.25rem;
 		}
 		h5 {
-			color: $dark-gray;
+			color: var(--dark-gray);
 		}
 		.list-image {
 			width: 100%;
@@ -141,15 +140,15 @@ ul li.list-item {
 				color: $green;
 			}
 			h5 {
-				color: $black;
+				color: var(--black);
 				.subsub {
-					color: $dark-gray;
+					color: var(--dark-gray);
 				}
 			}
 			.list-rating {
-				color: white !important;
-				border-color: $dark-gray;
-				background: $dark-gray;
+				color: var(--white) !important;
+				border-color: var(--dark-gray);
+				background: var(--dark-gray);
 			}
 			.list-rating-1,
 			.list-rating-2,
@@ -168,12 +167,16 @@ ul li.list-item {
 	}
 }
 
+.list-grid-large {
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
 .list-grid-numbered {
 	.list-rank {
 		margin-bottom: 1rem;
 		&:before {
 			content: counter(li);
-			color: $medium-gray;
+			color: var(--medium-gray);
 		}
 	}
 }
@@ -184,7 +187,7 @@ ul li.list-item {
 	width: 2rem;
 	height: 2rem;
 	line-height: 2rem;
-	border-radius: 100%;
+	border-radius: 50%;
 	transition: $t;
 }
 
@@ -206,5 +209,5 @@ ul li.list-item {
 }
 
 .book {
-	background-color: $light-gray;
+	background-color: var(--light-gray);
 }

@@ -8,13 +8,15 @@ title: Jeff Anders
 <section data-section-id="team" class="animated-section section-teams">
 	<div class="section-header">
 		<a id="teams" href="/#teams"><h2 class="section-title">Teams</h2></a>
-		<button data-group="teams" class="button-more button-link initially-hidden-teams">More Teams</button>
+		<button data-group="teams" class="button-more button-link text-button initially-hidden-teams">More</button>
 	</div>
 	<ul class="card-grid card-grid-compact card-grid-compact-medium">
   		{% for team in site.data.teams %}
 			<li class="compact-card compact-card-medium card-item-category-team {% if forloop.index > 2 %} initially-hidden-teams hidden{% endif %}">
 				<a href="{{ team.link }}">
-					<img src="{{ team.image }}" alt="{{ team.company }} logo">
+					{% capture teamname %}{{ team.company }}{% endcapture %}
+					{% capture teamiconpath %}{{ team.image }}{% endcapture %}
+					{% include pic.html param="square" file=teamiconpath alt=teamname %}
 					<h3>{{ team.company }}</h3>
 					<p class="card-secondary{% if team.active %} team-active{% endif %}">{{ team.role }}</p>
 				</a>
@@ -31,7 +33,7 @@ title: Jeff Anders
 	<a id="projects" href="/#projects"><h2 class="section-title">Projects</h2></a>
 	<ul class="card-grid">
 		{% for post in site.categories.project %}
-			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 24 %} initially-hidden-projects hidden{% endif %}">
+			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 12 %} initially-hidden-projects hidden{% endif %}">
 				{% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %}>{% endunless %}
 				<div class="card-image">
 					{% capture postname %}{{ post.title }}{% endcapture %}
@@ -56,12 +58,12 @@ title: Jeff Anders
 	<a id="talks" href="/#talks"><h2 class="section-title">Speaking</h2></a>
 	<ul class="card-grid">
 		{% for post in site.categories.talk %}
-			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 9 %} initially-hidden-talks hidden{% endif %}">
+			<li class="card-item card-item-category-{{ post.category }} {% if forloop.index > 4 %} initially-hidden-talks hidden{% endif %}">
 				{% unless post.still == true %}<a href="{% if post.external %}{{ post.external }}{% else %}{{ post.url }}{% endif %}" {% if post.external %}target="_blank"{% endif %}>{% endunless %}
 					<div class="card-image">
 						{% capture postname %}{{ post.title }}{% endcapture %}
 						{% capture thumbnailpath %}{{ post.url }}{{ post.thumbnail }}{% endcapture %}
-						{% include pic.html file=thumbnailpath alt=postname params="1:1" %}
+						{% include pic.html param="square" file=thumbnailpath alt=postname %}
 					</div>
 					<div class="card-info">
 						<h3 class="post-title">{{ post.title }}</h3>
@@ -110,9 +112,9 @@ title: Jeff Anders
 	<div class="about-me">
 		{% include_cached pic.html file="jeff-canyon.jpeg" alt="Jeff in a canyon" class="corner-round" %}
 		<aside>
-			<p>Hi, I'm Jeff Anders! I live in Denver, Colorado, USA with my wife Emily and daughter Nellie. You may know me by my last last name, Hilnbrand.</p>
-			<p>My time is focused on building <a href="https://ambrook.com?ref=jeffanders.co?ref=jeffanders.co">Ambrook</a>, the company I founded and lead design at. I'm thinking about design, climate, and fintech right now, and am also really interested in cartography, roller coasters, architecture, energy, cities, photography, travel.</p>
-			<p>Welcome to my website and portfolio. Explore my works and reach out to me if you'd like to connect!</p>
+			<p>Hi, I'm Jeff Anders! I live in Denver, Colorado with my wife Emily and daughter Nellie. You may have known me by my last last name, Hilnbrand.</p>
+			<p>I'm currently building <a href="https://ambrook.com?ref=jeffanders.co?ref=jeffanders.co">Ambrook</a> as co-founder and design leader. Talk to me about climate, fintech, architecture, roller coasters, cartography, energy, photography, and travel.</p>
+			<p>This is my website and portfolio. Explore my works and reach out if you'd like to connect!</p>
 		</aside>
 	</div>
 
@@ -120,7 +122,7 @@ title: Jeff Anders
 		<a id="contact" href="/#contact" class="invisitble"></a>
 		<ul class="card-grid card-grid-compact contact-grid">
 			{% for contact in site.data.contacts %}
-				<li class="compact-card">
+				<li class="compact-card {% if contact.dark contains "true" %}dark-contact{% endif %}">
 					<a href="{{ contact.link }}">{% include_cached icons/{{ contact.icon }}.html %}
 						<h3>{{ contact.name }}</h3>
 						<p class="card-secondary">{{ contact.handle }}</p>
@@ -130,6 +132,8 @@ title: Jeff Anders
 		</ul>
 	</div>
 </section>
+
+{% include footer.html %}
 
 <!-- Javascript -->
 <script type="text/javascript" src="/js/hidden.js"></script>

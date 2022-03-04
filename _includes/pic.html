@@ -1,14 +1,10 @@
 {% assign filetype = include.file | slice: -3,3 %}
 {% if filetype contains "svg" %}
-{% if page.layout == 'post' %}
-<picture><img src="/img/{{ page.url | slugify }}/{{ include.file }}" alt="{{ include.alt }}" class="{{ include.class }}" loading="lazy"></picture>
-{% else %}
-<picture><img src="/img/{{ include.file }}" alt="{{ include.alt }}" class="{{ include.class }}" loading="lazy"></picture>
-{% endif %}
+	<picture><img {% if page.layout == 'post' %} src="/img/{{ page.url | slugify }}/{{ include.file }}" {% else %} src="/img/{{ include.file }}" {% endif %} alt="{{ include.alt }}" class="{{ include.class }}"></picture>
 {% else %}
 {% if page.layout == 'post' %}
-{% picture "{{ page.url | slugify }}/{{ include.file }}" {{ include.params }} class="{{ include.class }}" --alt {{ include.alt }} %}
+	{% picture "{{ page.url | slugify }}/{{ include.file }}" {{ include.params }} class="{{ include.class }}" --alt {{ include.alt }} %}
 {% else %}
-{% picture "{{ include.file }}" {{ include.params }} class="{{ include.class }}" --alt {{ include.alt }} %}
+	{% picture "{{ include.file }}" {{ include.params }} class="{{ include.class }}" --alt {{ include.alt }} %}
 {% endif %}
 {% endif %}

@@ -1,4 +1,3 @@
-
 .section-header {
 	display: flex;
 	justify-content: space-between;
@@ -7,12 +6,8 @@
 	.section-title {
 		margin-bottom: 0;
 	}
-	button {
-		margin: -1rem 0;
-		background-color: $transparent;
-		color: $medium-gray;
-	}
 }
+
 .section-title {
 	margin-bottom: 3rem;
 	cursor: text;
@@ -21,22 +16,28 @@
 // posts grid
 
 .card-grid {
-	opacity: 1;
-	position: relative;
-	width: 100%; 
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 3rem;
 	transition: $t;
-	picture, p, h3, h2, h1 {
+	picture, img, p, h3, h2, h1 {
 		margin-bottom: 0;
 		margin-top: 0;
 	}
+	@media screen and (max-width: $desktop-max) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@media screen and (max-width: $laptop-max) {
+		grid-template-columns: 1fr 1fr;
+	}
 	@media screen and (max-width: $tablet-landscape-max) {
-		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+		grid-template-columns: 1fr;
 	}
 	@media screen and (max-width: $tablet-portrait-max) {
-		grid-template-columns: repeat(auto-fit, minmax(1fr));
+		grid-template-columns: 1fr 1fr;
+	}
+	@media screen and (max-width: $phone-landscape-max) {
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -49,11 +50,11 @@
 	.card-brief {
 		@extend .p;
 		transition: $t;
-		color: $medium-gray;
+		color: var(--medium-gray);
 	}
 	.post-external {
 		@extend .p;
-		color: $medium-gray;
+		color: var(--medium-gray);
 		opacity: 0;
 		transition: $t;
 	}
@@ -62,7 +63,7 @@
 			@extend .hover-shadow;
 		}
 		.card-brief {
-			color: $black;
+			color: var(--black);
 			transition: $t;
 		}
 		.post-external {
@@ -119,17 +120,16 @@
 // teams
 
 .team-active {
-	color: $dark-gray !important;
+	color: var(--dark-gray) !important;
 }
 
 .card-grid-compact {
 	row-gap: 2rem;
-	// grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
 }
 
 .compact-card a {
 	display: flex;
-	background: $lightest-gray;
+	background: var(--lightest-gray);
 	border-radius: $corner-radius;
 	padding: 1rem;
 	align-items: center;
@@ -137,7 +137,7 @@
 	&:hover {
 		@extend .hover-shadow;
 		.card-secondary {
-			color: $black;
+			color: var(--black);
 		}
 	}
 	h3 {
@@ -159,41 +159,52 @@ svg {
 }
 
 .card-secondary {
-	color: $medium-gray;
+	color: var(--medium-gray);
 	transition: $t;
 }
 
 .button-more {
-	color: $dark-gray;
+	color: var(--dark-gray);
 	margin-top: 3rem;
-	&::after {
+	&:hover {
+		transform: translateY(4px);
+		box-shadow: 0 -4px 0 var(--light-gray);
+	}
+	&:after {
 		content: "⇣";
-		margin-left: 1rem;
+	}
+	&:active {
+		transform: translateY(8px);
+		box-shadow: 0 -8px 0 var(--light-gray);
 	}
 }
 
+.text-button {
+	margin: -1rem 0;
+	background-color: $transparent;
+	color: var(--medium-gray);
+}
+
 .about-me {
-	display: grid;
-	gap: 6rem;
-	grid-template-columns: 1fr 2fr;
+	@extend .card-grid;
+
 	margin-bottom: 3rem;
-	@media screen and (max-width: $tablet-landscape-max) {
-		grid-template-columns: 1fr;
-		gap: 3rem;
-	}
-	picture {
-		width: 100%;
-	}
-	p {
-		@media screen and (min-width: $laptop-min) {
-			margin-left: -3rem;
-		}
-		margin-bottom: 1rem;
+	aside {
 		max-width: 39rem;
-		&:last-of-type {
-			margin-bottom: 0;
+		@media screen and (min-width: $desktop-min) {
+			grid-column: span 2;
+		}
+		p {
+			margin-bottom: 0.5rem;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
 		}
 	}
+	@media screen and (max-width: $tablet-portrait-max) {
+		grid-template-columns: 1fr;
+	}
+
 }
 
 .card-item-category-team {
@@ -237,10 +248,21 @@ svg {
 			animation-delay: 100ms * $project1;
 		}
 	}
-	@for $project2 from calc($limit-projects + 1) through 32 {
+	@for $project2 from 13 through 32 {
 		&:nth-child(#{$project2}) {
-			animation-delay: 100ms * $project2 - $limit-projects * 100ms;
+			animation-delay: 100ms * $project2 - 12 * 100ms;
 		}
+	}
+	@media screen and (min-width: $laptop-min) {
+		&:nth-child(n+13):nth-child(-n+24) {
+			display: block;
+			opacity: 1;
+		}
+		@for $project3 from calc($limit-projects + 1) through 32 {
+			&:nth-child(#{$project3}) {
+				animation-delay: 100ms * $project3 - $limit-projects * 100ms;
+			}
+		}	
 	}
 }
 
@@ -251,14 +273,29 @@ svg {
 			animation-delay: 100ms * $team1;
 		}
 	}
-	@for $team2 from calc($limit-talks + 1) through 32 {
+	@for $team2 from 5 through 32 {
 		&:nth-child(#{$team2}) {
-			animation-delay: 100ms * $team2 - $limit-talks * 100ms;
+			animation-delay: 100ms * $team2 - 4 * 100ms;
 		}
 	}
+	@media screen and (min-width: $laptop-min) {
+		&:nth-child(n+5):nth-child(-n+6) {
+			display: block;
+			opacity: 1;
+		}
+		@for $talk3 from calc($limit-projects + 1) through 32 {
+			&:nth-child(#{$talk3}) {
+				animation-delay: 100ms * $talk3 - $limit-projects * 100ms;
+			}
+		}	
+	}
+
 }
 
 .section-lists .compact-card {
+	svg {
+		fill: var(--black)
+	}
 	@extend .animate-together;
 	@for $list1 from 1 through 6 {
 		&:nth-child(#{$list1}) {
@@ -273,5 +310,11 @@ svg {
 		&:nth-child(#{$contact1}) {
 			animation-delay: 100ms * $contact1;
 		}
+	}
+}
+
+[data-theme='dark'] .dark-contact {
+	svg path {
+		fill: var(--dark-gray);
 	}
 }

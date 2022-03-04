@@ -73,10 +73,10 @@ p code {
 	font-size: 0.875rem;
 	font-family: $mono;
 	padding: 0.125rem 0.5rem;
-	background: $lighter-gray;
+	background: var(--lighter-gray);
 	margin: 0 0.125rem;
 }
 
 sub, .sub {
-	color: $medium-gray;
+	color: var(--medium-gray);
 }

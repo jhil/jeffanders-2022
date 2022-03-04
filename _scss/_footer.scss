@@ -1,0 +1,30 @@
+footer {
+	display: flex;
+	align-items: center;
+	color: var(--medium-gray);
+	justify-content: space-between;
+	margin-top: 3rem;
+	@media screen and (max-width: $tablet-portrait-max) {
+		flex-direction: column;
+		align-items: start;
+		gap: 1rem;
+	}
+
+
+}
+
+.footer-side {
+	display: flex;
+	gap: 3rem;
+	align-items: center;
+	@media screen and (max-width: $tablet-portrait-max) {
+		flex-direction: column;
+		align-items: start;
+		gap: 1rem;
+	}
+
+}
+
+.footer-divider {
+	margin-top: 6rem;
+}

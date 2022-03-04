@@ -1,0 +1,30 @@
+<hr class="footer-divider">
+
+<footer>
+
+	<div class="footer-side">
+		<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+			<option>v.2022</option>
+			<option value="https://jeffanders-2021.netlify.com/">v.2021</option>
+			<option value="https://jhilco-2014.netlify.com/">v.2014</option>
+			<option value="https://jhilco-2013.netlify.com/">v.2013</option>
+		</select>
+		<div id="theme-toggle" class="theme-toggle icon-link">
+			<span class="theme-toggle-light circle-icon">{% include icons/weather-sunny.html %}</span>
+			<span class="theme-toggle-dark circle-icon">{% include icons/weather-night.html %}</span>
+			<p>Mode</p>
+		</div>
+	</div>
+
+	<div class="footer-side">
+		<a class="icon-link external-hover" href="https://github.com/jhil/jeffanders-2022">
+			<div class="circle-icon">{% include icons/github.html %}</div>
+			<p>Source</p>
+		</a>
+		<a class="icon-link" href="/colophon">
+			<div class="circle-icon">{% include icons/script-outline.html %}</div>
+			<p>Colophon</p>
+		</a>
+	</div>
+
+</footer>

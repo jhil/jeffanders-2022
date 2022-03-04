@@ -1,36 +1,36 @@
-'use strict';
+"use strict";
 
-var autoprefixer = require('autoprefixer');
-var browserSync = require('browser-sync').create();
-var cp = require('child_process');
-var cssnano = require('cssnano');
-var cache = require('gulp-cache');
-var changed = require('gulp-changed');
-var del = require('del');
-var es = require('event-stream');
-var flatmap = require('gulp-flatmap');
-var fs = require('fs');
-var gm = require('gulp-gm');
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var jshint = require('gulp-jshint');
-var os = require('os');
-var parallel = require('concurrent-transform');
-var path = require('path');
-var plumber = require('gulp-plumber');
-var postcss = require('gulp-postcss');
-var print = require('gulp-print').default;
+var autoprefixer = require("autoprefixer");
+var browserSync = require("browser-sync").create();
+var cp = require("child_process");
+var cssnano = require("cssnano");
+var cache = require("gulp-cache");
+var changed = require("gulp-changed");
+var del = require("del");
+var es = require("event-stream");
+var flatmap = require("gulp-flatmap");
+var fs = require("fs");
+var gm = require("gulp-gm");
+var gulp = require("gulp");
+var imagemin = require("gulp-imagemin");
+var jshint = require("gulp-jshint");
+var os = require("os");
+var parallel = require("concurrent-transform");
+var path = require("path");
+var plumber = require("gulp-plumber");
+var postcss = require("gulp-postcss");
+var print = require("gulp-print").default;
 var reload = browserSync.reload;
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
-var sass = require('gulp-sass') (require('sass'));
-var sizeOf = require('image-size');
-var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
+var rename = require("gulp-rename");
+var replace = require("gulp-replace");
+var sass = require("gulp-sass")(require("sass"));
+var sizeOf = require("image-size");
+var sourcemaps = require("gulp-sourcemaps");
+var uglify = require("gulp-uglify");
 
-var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
 var messages = {
-  jekyllBuild: '<span style="color: grey">Running: </span> $ jekyll build'
+	jekyllBuild: '<span style="color: grey">Running: </span> $ jekyll build',
 };
 // var responsiveSizes = [20, 400, 800, 1600];
 
@@ -38,62 +38,80 @@ var messages = {
  **  SCSS  **
  ************/
 
- gulp.task('scss:build', function() {
-  var plugins = [
-    autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }),
-    cssnano({compatibility: 'ie8'}),
-  ];
-  return gulp.src('./_scss/style.scss')
-    .pipe(plumber())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: ['scss'],
-      onError: browserSync.notify,
-      outputStyle: 'compressed',
-    }))
-    .pipe(postcss(plugins))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./_site/css/'))
-    .pipe(reload({stream: true}))
-    .pipe(gulp.dest('./css/'));
+gulp.task("scss:build", function () {
+	var plugins = [
+		autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"], {
+			cascade: true,
+		}),
+		cssnano({ compatibility: "ie8" }),
+	];
+	return gulp
+		.src("./_scss/style.scss")
+		.pipe(plumber())
+		.pipe(rename({ suffix: ".min" }))
+		.pipe(sourcemaps.init())
+		.pipe(
+			sass({
+				includePaths: ["scss"],
+				onError: browserSync.notify,
+				outputStyle: "compressed",
+			})
+		)
+		.pipe(postcss(plugins))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest("./_site/css/"))
+		.pipe(reload({ stream: true }))
+		.pipe(gulp.dest("./css/"));
 });
 
-gulp.task('scss', gulp.series('scss:build'));
+gulp.task("scss", gulp.series("scss:build"));
 
-gulp.task('scss:optimized', function() {
-  var plugins = [
-    autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }),
-    cssnano({compatibility: 'ie8'}),
-  ];
-  return gulp.src('./_scss/style.scss')
-    .pipe(plumber())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(sass({
-      includePaths: ['scss'],
-      outputStyle: 'compressed',
-    }))
-    .pipe(postcss(plugins))
-    .pipe(gulp.dest('./_site/css/'))
-    .pipe(reload({stream: true}))
-    .pipe(gulp.dest('./css/'));
+gulp.task("scss:optimized", function () {
+	var plugins = [
+		autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"], {
+			cascade: true,
+		}),
+		cssnano({ compatibility: "ie8" }),
+	];
+	return gulp
+		.src("./_scss/style.scss")
+		.pipe(
+			plumber({
+				handleError: function (err) {
+					console.log(err);
+					this.emit("end");
+				},
+			})
+		)
+		.pipe(rename({ suffix: ".min" }))
+		.pipe(
+			sass({
+				includePaths: ["scss"],
+				outputStyle: "compressed",
+			})
+		)
+		.pipe(postcss(plugins))
+		.pipe(gulp.dest("./_site/css/"))
+		.pipe(reload({ stream: true }))
+		.pipe(gulp.dest("./css/"));
 });
 
 /******************
  **  JavaScript  **
  ******************/
-gulp.task('js:build', function() {
-  return gulp.src('./_js/**/*.js')
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./_site/js/'))
-    .pipe(reload({stream: true}))
-    .pipe(gulp.dest('./js/'));
+gulp.task("js:build", function () {
+	return gulp
+		.src("./_js/**/*.js")
+		.pipe(plumber())
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest("./_site/js/"))
+		.pipe(reload({ stream: true }))
+		.pipe(gulp.dest("./js/"));
 });
 
-gulp.task('js', gulp.series('js:build'));
+gulp.task("js", gulp.series("js:build"));
 
 /**********************
  ** Optimized Images **
@@ -219,72 +237,90 @@ gulp.task('js', gulp.series('js:build'));
  ** Jekyll **
  ************/
 
-gulp.task('jekyll:build', function(done) {
-  browserSync.notify(messages.jekyllBuild);
-  cp.spawn(jekyll, ['build'], {stdio: 'inherit'}).on('close', done);
+gulp.task("jekyll:build", function (done) {
+	browserSync.notify(messages.jekyllBuild);
+	cp.spawn(jekyll, ["build"], { stdio: "inherit" }).on("close", done);
 });
 
-gulp.task('jekyll:rebuild', gulp.series('jekyll:build', function(done) {
-  reload();
-  done();
-}));
+gulp.task(
+	"jekyll:rebuild",
+	gulp.series("jekyll:build", function (done) {
+		reload();
+		done();
+	})
+);
 
-gulp.task('jekyll', gulp.series('jekyll:build'));
+gulp.task("jekyll", gulp.series("jekyll:build"));
 
 /******************
  ** Global Tasks **
  ******************/
 
-gulp.task('clean', function() {
-  return del(['./_site/', './css/', './js/']);
+gulp.task("clean", function () {
+	return del(["./_site/", "./css/", "./js/"]);
 });
 
-gulp.task('watch', function() {
-  gulp.watch([
-    './**/*.html',
-    '!./_site/**/*.html',
-    './_layouts/*.html',
-    './_includes/*.html',
-    './_drafts/*.html',
-    './_posts/*',
-    './_data/*',
-    './_config.yml'], gulp.series('jekyll:rebuild'));
-  gulp.watch('./_scss/**/*.scss', gulp.series('scss'));
-  gulp.watch(['./_js/**/*.js', 'Gulpfile.js'], gulp.series('js'));
+gulp.task("watch", function () {
+	gulp.watch(
+		[
+			"./**/*.html",
+			"!./_site/**/*.html",
+			"./_layouts/*.html",
+			"./_includes/*.html",
+			"./_drafts/*.html",
+			"./_posts/*",
+			"./_data/*",
+			"./_config.yml",
+		],
+		gulp.series("jekyll:rebuild")
+	);
+	gulp.watch("./_scss/**/*.scss", gulp.series("scss"));
+	gulp.watch(["./_js/**/*.js", "Gulpfile.js"], gulp.series("js"));
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('scss', 'js'), 'jekyll'));
+gulp.task("build", gulp.series("clean", gulp.parallel("scss", "js"), "jekyll"));
 
-gulp.task('build:optimized', gulp.series('clean', gulp.parallel('scss:optimized', 'js'), 'jekyll'));
+gulp.task(
+	"build:optimized",
+	gulp.series("clean", gulp.parallel("scss:optimized", "js"), "jekyll")
+);
 
-gulp.task('deploy:rsync', function(done) {
-  cp.exec('chmod -R 775 _site && rsync -avuzh _site/* dan:/srv/schlosser.io/public_html/', function() {
-    process.stdout.write('Deployed to schlosser.io\n');
-    done();
-  })
-  .stdout.on('data', function(data) {
-    process.stdout.write(data);
-  });
+gulp.task("deploy:rsync", function (done) {
+	cp.exec(
+		"chmod -R 775 _site && rsync -avuzh _site/* dan:/srv/schlosser.io/public_html/",
+		function () {
+			process.stdout.write("Deployed to schlosser.io\n");
+			done();
+		}
+	).stdout.on("data", function (data) {
+		process.stdout.write(data);
+	});
 });
 
-gulp.task('deploy', gulp.series('build:optimized', 'deploy:rsync'));
+gulp.task("deploy", gulp.series("build:optimized", "deploy:rsync"));
 
 // use default task to launch Browsersync and watch JS files
-gulp.task('serve', gulp.series('build', function(done) {
+gulp.task(
+	"serve",
+	gulp.series(
+		"build",
+		function (done) {
+			// Serve files from the root of this project
+			browserSync.init(["./dist/**/*"], {
+				ghostMode: {
+					clicks: false,
+					forms: false,
+					scroll: false,
+				},
+				server: {
+					baseDir: "_site",
+				},
+			});
 
-  // Serve files from the root of this project
-  browserSync.init(['./dist/**/*'], {
-    ghostMode: {
-      clicks: false,
-      forms: false,
-      scroll: false,
-    },
-    server: {
-      baseDir: '_site',
-    },
-  });
+			done();
+		},
+		"watch"
+	)
+);
 
-  done();
-}, 'watch'));
-
-gulp.task('default', gulp.series('serve'));
+gulp.task("default", gulp.series("serve"));

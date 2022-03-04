@@ -1,11 +1,13 @@
 presets:
   default:
     formats: [webp, original]
-    widths: [192, 480, 640, 1280, 1600, 1920]
+    widths: [480, 960, 1600]
     keep: center
-    quality: 90
-    format_quality:
-      jpg: 85
-      jpeg: 85
-      png: 85
-      webp: 90
+    quality: 85
+  square:
+    formats: [webp, original]
+    widths: [48,192,480]
+    keep: center
+    quality: 85
+    crop: '1:1'
+
