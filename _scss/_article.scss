@@ -24,11 +24,14 @@ article {
 	@media screen and (max-width: $tablet-portrait-max) {
 		display: flex;
 		flex-direction: column;
+		align-items: normal;
 	}
 }
 
 .article-intro-bottom {
-	align-items: end;
+	@media screen and (min-width: $tablet-landscape-min) {
+		align-items: end;
+	}
 }
 
 .article-metadata {

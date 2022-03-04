@@ -83,13 +83,10 @@ $xxxl-desktop-min: 2561px;
 }
 
 @media screen and (max-width: $small-phone-max) {
-	html, body {
-		font-size: 14px;
-	}
 }
 
 @media screen and (max-width: $flip-phone-max) {
 	html, body {
-		font-size: 13px;
+		font-size: 14px;
 	}
 }

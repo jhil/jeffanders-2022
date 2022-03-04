@@ -114,10 +114,7 @@ hr {
 
 .wrapper {
 	box-sizing: border-box;
-	padding: 3rem;
-	@media screen and (max-width: $phone-portrait-max) {
-		padding: 1.5rem;
-	}
+	padding: 3rem var(--space);
 }
 
 .content {
@@ -241,9 +238,6 @@ button,
 	color: var(--black);
 	border-radius: $corner-radius;
 	transition: $t;
-	span:last-of-type {
-		margin-left: 1.5rem;
-	}
 	&:hover {
 		background: var(--light-gray);
 		transform: translateY(-4px);
