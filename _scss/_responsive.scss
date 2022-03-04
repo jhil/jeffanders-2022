@@ -17,6 +17,10 @@ $xl-desktop-max: 1920px;
 $xxl-desktop-max: 2560px;
 $xxxl-desktop-min: 2561px;
 
+:root {
+	--space: 3rem;
+}
+
 @media screen and (min-width: $xxxl-desktop-min) {
 	html, body {
 		font-size: 22px;
@@ -48,6 +52,9 @@ $xxxl-desktop-min: 2561px;
 }
 
 @media screen and (max-width: $tablet-portrait-max) {
+	:root {  
+		--space: 2rem;
+	}
 	.hide-tablet {
 		display: none !important;
 	}
@@ -67,6 +74,9 @@ $xxxl-desktop-min: 2561px;
 }
 
 @media screen and (max-width: $phone-portrait-max) {
+	:root {  
+		--space: 1.5rem;
+	}
 	html, body {
 		font-size: 15px;
 	}

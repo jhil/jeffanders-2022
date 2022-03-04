@@ -1,5 +1,6 @@
 article {
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	gap: 3rem;
 }
 
@@ -10,13 +11,19 @@ article {
 }
 
 .article-intro {
-	@extend .grid-container;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 3rem;
 	justify-content: space-between;
 	align-items: center;
 	color: var(--dark-gray);
 	.button-link {
 		grid-column: 5 / 7;
 		justify-content: space-between;	
+	}
+	@media screen and (max-width: $tablet-portrait-max) {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -143,6 +150,7 @@ ul.article-list {
 .article-columns {
 	display: grid;
 	gap: 3rem;
+	margin: 3rem 0;
 	& > picture {
 		margin: 0;
 	}
