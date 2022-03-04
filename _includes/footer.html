@@ -1,11 +1,21 @@
+
 <footer>
 
 	<div class="footer-side">
 		<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-			<option>v.2022</option>
+			<option value="#">v.2022</option>
 			<option value="https://jeffanders-2021.netlify.com/">v.2021</option>
+			<option disabled>v.2020 (soon)</option>
+			<option disabled>v.2019 (soon)</option>
+			<option disabled>v.2018 (soon)</option>
+			<option disabled>v.2017 (soon)</option>
+			<option disabled>v.2016 (soon)</option>
+			<option disabled>v.2015 (soon)</option>
 			<option value="https://jhilco-2014.netlify.com/">v.2014</option>
 			<option value="https://jhilco-2013.netlify.com/">v.2013</option>
+			<option disabled>v.2012 (soon)</option>
+			<option disabled>v.2011 (soon)</option>
+
 		</select>
 		<div id="theme-toggle" class="theme-toggle icon-link">
 			<span class="theme-toggle-light circle-icon">{% include icons/weather-sunny.html %}</span>
