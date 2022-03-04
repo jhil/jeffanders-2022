@@ -1,7 +1,7 @@
 ---
 layout: post
 category: project
-title: "Facebook Open Source"
+title: "Meta Open Source"
 brief: "Draft.js, Docusaurus, and more contributions"
 date: 2018-06-19
 thumbnail: facebook-open-source.png
@@ -11,7 +11,7 @@ color: "#23CEFC"
 
 
 {% contentfor intro %}
-Over the course of two years, I worked with the <a href="https://opensource.facebook.com/">Facebook Open Source</a> team on various project logos.
+Over the course of two years, I worked with the <a href="https://opensource.facebook.com/">Meta Open Source</a> team on various project logos.
 {% endcontentfor %}
 
 ## Draft.js

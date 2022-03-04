@@ -8,9 +8,10 @@ thumbnail: pantschanger-prints_thumbnail.jpg
 color: "#905BCB"
 ---
 
-
+{% contentfor intro %}
 Pantschanger Prints is a small batch shirt co.
+{% endcontentfor %}
 
-{% include pic.html file="pantschanger-prints_logo.png" %}
-
+{% include pic.html file="pantschanger-prints_thumbnail.jpg" %}
 {% include pic.html file="pantschanger-prints_ixn.gif" %}
+{% include pic.html file="pantschanger-prints_logo.png" %}

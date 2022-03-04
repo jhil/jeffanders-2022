@@ -14,25 +14,25 @@ Structure is a startup providing instant cloud deployments. We set out to create
 
 
 {% include pic.html file="structure-dr.png" %}
+{% include pic.html file="structure-full-white-blue.svg" %}
+
 
 ## Explorations
 
-<div class="two-column">
 {% include pic.html file="structure-s5-c.png" %}
-{% include pic.html file="bolt-dr.png" class="shadow" %}
-</div>
 
 <div class="two-column">
-
-{% include pic.html file="structure-bolt-icon.png" %}
+{% include pic.html file="structure-s1-a@4x.png" %}
 {% include pic.html file="structure-s3-a@4x.png" class="shadow" %}
 </div>
 
 <div class="two-column">
-{% include pic.html file="structure-s1-a@4x.png" %}
-{% include pic.html file="structure-s4-b@4x.png" %}
-</div>
-<div class="two-column">
 
+{% include pic.html file="bolt-dr.png" class="shadow" %}
+{% include pic.html file="structure-bolt-icon.png" %}
+</div>
+
+<div class="two-column">
 {% include pic.html file="ring-dr.png" %}
+{% include pic.html file="structure-s4-b@4x.png" %}
 </div>

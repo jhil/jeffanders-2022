@@ -60,9 +60,11 @@ article {
 	:first-child {
 		margin-top: 0;
 	}
+	p, ul {
+		max-width: 39rem;
+	}
 	p {
 		margin-bottom: 1rem;
-		max-width: 39rem;
 	}
 	
 	a {

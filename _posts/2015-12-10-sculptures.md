@@ -17,9 +17,11 @@ color: "#7D3665"
 
 {% include pic.html file="sculptures_serial-shadow.jpg" %}
 {% include pic.html file="sculptures_serial-wall.jpg" %}
-{% include pic.html file="sculptures_serial-label.JPG" %}
 {% include pic.html file="sculptures_serial-wood.jpg" %}
+<div class="two-column">
+{% include pic.html file="sculptures_serial-label.JPG" %}
 {% include pic.html file="sculptures_serial-stack.JPG" %}
+</div>
 {% include pic.html file="sculptures_serial-paint.JPG" %}
 {% include pic.html file="sculptures_serial-black.JPG" %}
 
@@ -27,14 +29,22 @@ color: "#7D3665"
 
 {% include pic.html file="sculptures_legs.jpg" %}
 {% include pic.html file="sculptures_legs-noga.JPG" %}
+<div class="two-column">
 {% include pic.html file="sculptures_legs-bandages.JPG" %}
 {% include pic.html file="sculptures_legs-paint.JPG" %}
+</div>
+<div class="two-column">
 {% include pic.html file="sculptures_legs-saw.JPG" %}
 {% include pic.html file="sculptures_legs-enclosure.JPG" %}
+</div>
+<div class="two-column">
 {% include pic.html file="sculptures_legs-drops.JPG" %}
 {% include pic.html file="sculptures_legs-drops-painted.JPG" %}
+</div>
+<div class="two-column">
 {% include pic.html file="sculptures_legs-dry.JPG" %}
 {% include pic.html file="sculptures_legs-car.JPG" %}
+</div>
 
 ## Project 2 - Repetition
 
@@ -46,10 +56,12 @@ color: "#7D3665"
 
 {% include pic.html file="sculptures_cardboard.jpg" %}
 {% include pic.html file="sculptures_cardboard-back.jpg" %}
-{% include pic.html file="sculptures_cardboard-beard.JPG" %}
 {% include pic.html file="sculptures_cardboard-keys.JPG" %}
+<div class="two-column">
 {% include pic.html file="sculptures_cardboard-template.jpg" %}
 {% include pic.html file="sculptures_cardboard-face.jpg" %}
+</div>
+{% include pic.html file="sculptures_cardboard-beard.JPG" %}
 
 ## Digital Fabrication 2 - Castle
 
