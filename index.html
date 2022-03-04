@@ -111,7 +111,7 @@ title: Jeff Anders
 <section data-section-id="about" class="animated-section section-about">
 	<a id="about" href="/#about"><h2 class="section-title">About</h2></a>
 	<figure class="about-me">
-		{% include_cached pic.html file="jeff-canyon.jpeg" alt="Jeff in a canyon" class="corner-round" %}
+		{% include pic.html file="jeff-canyon.jpeg" alt="Jeff in a canyon" class="corner-round" %}
 		<figcaption>
 			<p>Hi, I'm Jeff Anders! I live in Denver, Colorado with my wife Emily and daughter Nellie. You may have known me by my last last name, Hilnbrand.</p>
 			<p>I'm currently building <a href="https://ambrook.com?ref=jeffanders.co?ref=jeffanders.co">Ambrook</a> as co-founder and design leader. Talk to me about climate, fintech, architecture, roller coasters, cartography, energy, photography, and travel.</p>
@@ -124,7 +124,7 @@ title: Jeff Anders
 		<ul class="card-grid card-grid-compact contact-grid">
 			{% for contact in site.data.contacts %}
 				<li class="compact-card {% if contact.dark contains "true" %}dark-contact{% endif %}">
-					<a href="{{ contact.link }}">{% include_cached icons/{{ contact.icon }}.html %}
+					<a href="{{ contact.link }}">{% include icons/{{ contact.icon }}.html %}
 						<h3>{{ contact.name }}</h3>
 						<p class="card-secondary">{{ contact.handle }}</p>
 					</a>

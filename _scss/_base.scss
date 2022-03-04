@@ -99,7 +99,7 @@ picture {
 }
 
 @mixin clearfix {
-	&:after {
+	&::after {
 		clear: both;
 		content: " ";
 		display: block;
@@ -154,7 +154,7 @@ section,
 	width: 100%;
 	overflow: hidden;
 
-	&:before {
+	&::before {
 		content: "";
 		display: block;
 		padding-top: 100%;
@@ -165,32 +165,32 @@ section,
 	position: absolute;
 }
 
-.ratio-2_1:before {
+.ratio-2_1::before {
 	@extend .ratio;
 	padding-top: 50%;
 }
 
-.ratio-16_9:before {
+.ratio-16_9::before {
 	@extend .ratio;
 	padding-top: 56.25%;
 }
 
-.ratio-8_5:before {
+.ratio-8_5::before {
 	@extend .ratio;
 	padding-top: 62.5%;
 }
 
-.ratio-3_2:before {
+.ratio-3_2::before {
 	@extend .ratio;
 	padding-top: 66.67%;
 }
 
-.ratio-4_3:before {
+.ratio-4_3::before {
 	@extend .ratio;
 	padding-top: 75%;
 }
 
-.ratio-1_1:before {
+.ratio-1_1::before {
 	@extend .ratio;
 	padding-top: 100%;
 }
@@ -328,13 +328,13 @@ select > option {
 }
 
 .external-hover {
-	p:after {
+	p::after {
 		content: " ↗";
 		opacity: 0;
 		transition: $t;
 	}
 	&:hover {
-		p:after {
+		p::after {
 		opacity: 1;
 		}
 	}

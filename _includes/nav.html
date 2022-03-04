@@ -5,24 +5,23 @@
 			<img class="sidebar-avatar" src="/img/jeffanders-small.jpg" alt="Jeff Anders avatar">			<h1 class="sidebar-name" href="/">Jeff Anders</h1>
 		</a>
 		<menu class="sidebar-social tablet-mobile-only">
-  			{% include_cached social.html %}
+  			{% include social.html %}
 		</menu>
 	</header>
 
 	<nav class="section-nav hide-tablet">
 		<ul>
-			<a class="nav-team" href="/#teams"><li>Teams<span class="active-tab"></span></li></a>
-			<a class="nav-project" href="/#projects"><li>Projects<span class="active-tab"></span></li></a>
-			<a class="nav-talk" href="/#talks"><li>Talks<span class="active-tab"></span></li></a>
-			{% comment %} <a class="nav-article" href="/#writing"><li>Writing<span class="active-tab"></span></li></a> {% endcomment %}
-			<a class="nav-list" href="/#lists"><li>Lists<span class="active-tab"></span></li></a>
-			<a class="nav-about" href="/#about"><li>About<span class="active-tab"></span></li></a>
-			{% comment %} <a class="nav-contact" href="/#contact"><li>Contact<span class="active-tab"></span></li></a> {% endcomment %}
+			<li><a class="nav-team" href="/#teams">Teams<span class="active-tab"></span></a></li>
+			<li><a class="nav-project" href="/#projects">Projects<span class="active-tab"></span></a></li>
+			<li><a class="nav-talk" href="/#talks">Talks<span class="active-tab"></span></a></li>
+			{% comment %} <li><a class="nav-article" href="/#writing">Writing<span class="active-tab"></span></a></li> {% endcomment %}
+			<li><a class="nav-list" href="/#lists">Lists<span class="active-tab"></span></a></li>
+			<li><a class="nav-about" href="/#about">About<span class="active-tab"></span></a></li>
 		</ul>
 	</nav>
 
 	<menu class="sidebar-social hide-tablet">
-  		{% include_cached social.html %}
+  		{% include social.html %}
 	</menu>
 
 </aside>

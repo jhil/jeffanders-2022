@@ -1,5 +1,19 @@
+.post-list .article-body {
+	ul {
+		max-width: 100%;
+		li {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
 .rich-before {
-	&:before {
+	&::before {
 		display: inline-block;
 		width: 3rem;
 		text-align: center;
@@ -8,7 +22,7 @@
 }
 
 .rich-after {
-	&:after {
+	&::after {
 		display: inline-block;
 		width: 3rem;
 		text-align: center;
@@ -18,7 +32,7 @@
 
 .list-numbered {
 	.list-row {
-		&:before {
+		&::before {
 			content: counter(li);
 		}
 	}
@@ -54,7 +68,7 @@ ul li.list-item {
 
 .list-row {
 	@extend .rich-before;
-	&:before {
+	&::before {
 		content: "∙";
 		@extend .h5;
 	}
@@ -136,7 +150,7 @@ ul li.list-item {
 				transform: scale(1.05);
 				transition: $t;
 			}
-			.list-rank:before {
+			.list-rank::before {
 				color: $green;
 			}
 			h5 {
@@ -174,7 +188,7 @@ ul li.list-item {
 .list-grid-numbered {
 	.list-rank {
 		margin-bottom: 1rem;
-		&:before {
+		&::before {
 			content: counter(li);
 			color: var(--medium-gray);
 		}

@@ -6,7 +6,6 @@ title: Colophon
 * Built with [Jekyll](https://jekyllrb.com/), [Gulp](https://gulpjs.com/), [Yarn](https://yarnpkg.com/), and a slew of plugins
 	- [jekyll_picture_tag](https://rbuchberger.github.io/jekyll_picture_tag/)
 	- [jekyll-contentblocks](https://github.com/rustygeldmacher/jekyll-contentblocks)
-	- [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache)
 	- [jekyll-target-blank](https://github.com/keithmifsud/jekyll-target-blank)
 	- [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
 * Hosted with [Netlify](https://www.netlify.com/) and [GitHub](https://github.com/)

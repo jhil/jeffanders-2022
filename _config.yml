@@ -17,7 +17,6 @@ url: "https://jeffanders.co" # the base hostname & protocol for your site
 
 plugins:
   - jekyll-target-blank
-  - jekyll-include-cache
   - jekyll-sitemap
 
 # Jekyll Picture Tag

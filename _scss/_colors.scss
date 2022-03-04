@@ -20,12 +20,12 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
 	--black: #FFFFFF;
-	--dark-gray: #CCCCCC;
-	--medium-gray: #999999;
+	--dark-gray: #DDDDDD;
+	--medium-gray: #BBBBBB;
 	--light-gray: #777777;
 	--lighter-gray: #555555;
 	--lightest-gray: #333333;
-	--white: #222222;
+	--white: #111111;
 }
 
 $transparent: rgba(0, 0, 0, 0);
@@ -45,19 +45,19 @@ $red-transparent: rgba(255,76,76,.5);
 }
 
 [data-theme='light'] .theme-toggle {
-	p:before {
+	p::before {
 		content: "Light ";
 	}
 }
 
 [data-theme='dark'] .theme-toggle {
-	p:before {
+	p::before {
 		content: "Dark ";
 	}
 }
 
 .theme-toggle:hover {
-	p:before {
+	p::before {
 		content: "Switch "
 	}
 	.theme-toggle-light {

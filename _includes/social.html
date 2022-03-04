@@ -1,4 +1,4 @@
 {% for contact in site.data.contacts limit:3 %}
-	<a class="icon-link" href="{{ contact.link }}" title="{{ contact.name }}"><div class="circle-icon">{% include_cached icons/{{ contact.icon }}.html %}</div></a>
+	<a class="icon-link" href="{{ contact.link }}" title="{{ contact.name }}"><div class="circle-icon">{% include icons/{{ contact.icon }}.html %}</div></a>
 {% endfor %}
-<a class="icon-link hide-mobile" href="/#contact" title="More Contact"><div class="circle-icon">{% include_cached icons/dots-horizontal.html %}</div></a>
+<a class="icon-link hide-mobile" href="/#contact" title="More Contact"><div class="circle-icon">{% include icons/dots-horizontal.html %}</div></a>

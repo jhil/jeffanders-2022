@@ -165,7 +165,7 @@ svg {
 		transform: translateY(4px);
 		box-shadow: 0 -4px 0 var(--light-gray);
 	}
-	&:after {
+	&::after {
 		content: "⇣";
 	}
 	&:active {
