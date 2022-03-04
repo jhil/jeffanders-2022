@@ -189,8 +189,6 @@ svg {
 	@extend .card-grid;
 
 	margin-bottom: 3rem;
-	picture {
-	}
 	aside {
 		max-width: 39rem;
 		@media screen and (min-width: $desktop-min) {
@@ -203,6 +201,10 @@ svg {
 			}
 		}
 	}
+	@media screen and (max-width: $tablet-portrait-max) {
+		grid-template-columns: 1fr;
+	}
+
 }
 
 .card-item-category-team {
