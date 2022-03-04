@@ -6,5 +6,5 @@ title: "Shell Talk 051"
 date: 2016-04-14
 thumbnail: jb.jpg
 color: "#FBF2CD"
-still: true
+external: https://docs.google.com/presentation/d/e/2PACX-1vRXlC8CpbQ4hh2hkUThWFQsiWRCJb49ix33Lj-VfxJlPJXKFctIDoXaN45VDJNfBsJB7W8DMiW-Ru3_/pub?start=false&loop=false&delayms=3000
 ---

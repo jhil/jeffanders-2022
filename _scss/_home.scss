@@ -47,6 +47,9 @@
 		border-radius: $corner-radius;
 		transition: $t;
 	}
+	.card-info {
+		margin: 1.5rem 0 0 0;
+	}
 	.card-brief {
 		@extend .p;
 		transition: $t;
@@ -80,35 +83,27 @@
 
 .card-item-category-project {
 	.card-image {
-		margin-bottom: 1.5rem;
 		@extend .image-fill;
 		@extend .ratio-8_5;
-	}
-
-	.card-info {
-		padding-right: 0.25rem;
 	}
 }
 
 .card-item-category-talk a {
-	align-items: start;
 	@media screen and (max-width: $laptop-max) {
 		display: flex;
 		align-items: center;
-	}
-	&:hover .card-image {
-		transform: none;
+		.card-info {
+			margin: 0 0 0 1.5rem;
+		}	
 	}
 	.card-image {
 		@extend .image-fill;
 		@extend .ratio-1_1;
-		width: 4.5rem;
-		height: 4.5rem;
-		margin: 0 0 1.5rem;
+		width: 6rem;
+		height: 6rem;
 		@media screen and (max-width: $laptop-max) {
-			margin: 0 1.5rem 0 0;
-			width: 3rem;
-			height: 3rem;	
+			width: 4.5rem;
+			height: 4.5rem;	
 		}
 	}
 	h3:nth-of-type(2) {

@@ -63,8 +63,9 @@ title: Jeff Anders
 					<div class="card-image">
 						{% capture postname %}{{ post.title }}{% endcapture %}
 						{% capture thumbnailpath %}{{ post.url }}{{ post.thumbnail }}{% endcapture %}
-						{% include pic.html param="square" file=thumbnailpath alt=postname %}
+						{% include pic.html file=thumbnailpath alt=postname %}
 					</div>
+
 					<div class="card-info">
 						<h3 class="post-title">{{ post.title }}</h3>
 						<h3 class="card-brief">{{ post.brief }}{% if post.external %}<span class="post-external">&ensp;↗</span>{% endif %}</h3>
