@@ -13,5 +13,7 @@ _data/responsiveMetadata.json
 /js
 /css
 
+css/style.min.css
+
 # macOS
 .DS_Store

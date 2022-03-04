@@ -6,7 +6,7 @@ $t: color 0.5s ease, fill 0.5s ease, background-color 0.5s ease,
 
 $t-fast: color 0.25s ease, fill 0.25s ease, background-color 0.25s ease,
 	box-shadow 0.25s ease, opacity 0.25s ease, transform 0.25s ease,
-	border-bottom 0.25s ease, font-variation-settings 0.25s ease;
+	border-bottom 0.25s ease, font-variation-settings 0.25s ease;  
 
 @keyframes animate-fadein {
 	from {
@@ -114,10 +114,7 @@ hr {
 
 .wrapper {
 	box-sizing: border-box;
-	padding: 3rem;
-	@media screen and (max-width: $phone-portrait-max) {
-		padding: 1.5rem;
-	}
+	padding: 3rem var(--space);
 }
 
 .content {
@@ -241,9 +238,6 @@ button,
 	color: var(--black);
 	border-radius: $corner-radius;
 	transition: $t;
-	span:last-of-type {
-		margin-left: 1.5rem;
-	}
 	&:hover {
 		background: var(--light-gray);
 		transform: translateY(-4px);
@@ -253,12 +247,6 @@ button,
 		transform: translateY(-2px);
 		box-shadow: 0 2px 0 var(--light-gray);
 	}
-}
-
-.grid-container {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: 3rem;
 }
 
 .hidden {

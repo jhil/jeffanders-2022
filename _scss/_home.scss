@@ -189,7 +189,7 @@ svg {
 	@extend .card-grid;
 
 	margin-bottom: 3rem;
-	aside {
+	figcaption {
 		max-width: 39rem;
 		@media screen and (min-width: $desktop-min) {
 			grid-column: span 2;
