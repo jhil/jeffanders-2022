@@ -1,13 +1,13 @@
-<div class="sidebar wrapper">
+<aside class="sidebar wrapper">
 
-	<div class="mobile-nav-row">
+	<header class="mobile-nav-row">
 		<a href="/" class="sidebar-title">
 			<img class="sidebar-avatar" src="/img/jeffanders-small.jpg" alt="Jeff Anders avatar">			<h1 class="sidebar-name" href="/">Jeff Anders</h1>
 		</a>
-		<div class="sidebar-social tablet-mobile-only">
+		<menu class="sidebar-social tablet-mobile-only">
   			{% include_cached social.html %}
-		</div>
-	</div>
+		</menu>
+	</header>
 
 	<nav class="section-nav hide-tablet">
 		<ul>
@@ -21,8 +21,8 @@
 		</ul>
 	</nav>
 
-	<div class="sidebar-social hide-tablet">
+	<menu class="sidebar-social hide-tablet">
   		{% include_cached social.html %}
-	</div>
+	</menu>
 
-</div>
+</aside>
