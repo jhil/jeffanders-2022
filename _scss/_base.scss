@@ -51,10 +51,6 @@ $corner-radius: 0.25rem;
 
 $sidebar-width: 18rem;
 
-$limit-teams: 6;
-$limit-projects: 24;
-$limit-talks: 6;
-
 html {
 	height: 100%;
 	padding: 0;
@@ -122,7 +118,7 @@ hr {
 	@media screen and (min-width: $tablet-landscape-min) {
 		padding-left: $sidebar-width + 3rem;
 	}
-	max-width: 93rem;
+	max-width: 120rem;
 	width: 100%;
 	margin: 0 auto;
 }

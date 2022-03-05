@@ -13,7 +13,8 @@ $laptop-max: 1280px;
 $desktop-min: 1281px;
 $desktop-max: 1440px;
 $xl-desktop-min: 1441px;
-$xl-desktop-max: 1920px;
+$xl-desktop-max: 1728px;
+$xxl-desktop-min: 1729px;
 $xxl-desktop-max: 2560px;
 $xxxl-desktop-min: 2561px;
 
@@ -23,19 +24,19 @@ $xxxl-desktop-min: 2561px;
 
 @media screen and (min-width: $xxxl-desktop-min) {
 	html, body {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 
 @media screen and (max-width: $xxl-desktop-max) {
 	html, body {
-		font-size: 20px;
+		font-size: 18px;
 	}
 }
 
 @media screen and (max-width: $xl-desktop-max) {
 	html, body {
-		font-size: 18px;
+		font-size: 17px;
 	}
 }
 

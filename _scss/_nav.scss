@@ -8,6 +8,7 @@
 	background: var(--lightest-gray);
 	@media screen and (max-width: $tablet-portrait-max) {
 		gap: 1.5rem;
+		padding: 1.5rem;
 	}
 	@media screen and (min-width: $tablet-landscape-min) {
 		position: fixed;
