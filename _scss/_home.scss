@@ -187,19 +187,19 @@ svg {
 
 .about-me {
 	@extend .card-grid;
-
 	margin-bottom: 3rem;
+	picture {
+		@media screen and (min-width: $xl-desktop-min) {
+			grid-column: span 2;
+		}
+	}
 	figcaption {
+		max-width: 39rem;
 		@media screen and (min-width: $desktop-min) {
 			grid-column: span 2;
 		}
-		picture {
-			@media screen and (min-width: $xl-desktop-min) {
-				grid-column: span 2;
-			}
-		}
 		p {
-			margin-bottom: 0.5rem;
+			margin-bottom: 1rem;
 			&:last-of-type {
 				margin-bottom: 0;
 			}
