@@ -95,7 +95,7 @@ article {
 		margin: 1rem 0;
 	}
 	blockquote p {
-		padding: 0.25rem 0 0.25rem 2rem;
+		padding: 0.25rem 0 0.25rem var(--space);
 		border-left: 4px var(--light-gray) solid;
 		margin: 1.5rem 0;
 		color: var(--dark-gray);
