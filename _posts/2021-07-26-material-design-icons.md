@@ -4,7 +4,7 @@ category: project
 title: "Material Design Icons"
 brief: "core contributor for community set"
 date: 2021-07-26
-thumbnail: material-design-icons.png
+thumbnail: material-design-icons.svg
 external: https://materialdesignicons.com/
 color: "#83C4FD"
 ---
