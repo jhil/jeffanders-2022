@@ -80,6 +80,10 @@ article {
 		cursor: crosshair;
 	}
 
+	a > picture, a > img {
+		cursor: pointer;
+	}
+
 	picture {
 		border-radius: $corner-radius;
 		margin: 3rem 0;
