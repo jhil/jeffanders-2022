@@ -22,7 +22,7 @@ Emily and I have angel invested small checks in a few startups. We like adding v
 	{% endfor %}
 </ul>
 
-## Secondary & Crowdfunding
+## Crowdfunding
 
 <ul class="card-grid card-grid-compact">
 	{% for investing in site.data.investing %}
