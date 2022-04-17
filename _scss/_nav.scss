@@ -103,11 +103,9 @@ nav {
 .in-section-list .nav-list,
 .in-section-about .nav-about,
 .in-section-contact .nav-contact {
-	li a {
 		background: var(--white);
 		color: var(--black);
 		.active-tab {
 			opacity: 1;
 		}
-	}
 }
