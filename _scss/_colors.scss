@@ -1,7 +1,7 @@
 html:root {
-	--black: #222222;
-	--dark-gray: #555555;
-	--medium-gray: #888888;
+	--black: #111111;
+	--dark-gray: #444444;
+	--medium-gray: #777777;
 	--light-gray: #DDDDDD;
 	--lighter-gray: #EEEEEE;
 	--lightest-gray: #F7F7F7;
@@ -9,9 +9,9 @@ html:root {
 }
 
 html[data-theme='light'] {
-	--black: #222222;
-	--dark-gray: #555555;
-	--medium-gray: #888888;
+	--black: #111111;
+	--dark-gray: #444444;
+	--medium-gray: #777777;
 	--light-gray: #DDDDDD;
 	--lighter-gray: #EEEEEE;
 	--lightest-gray: #F7F7F7;
