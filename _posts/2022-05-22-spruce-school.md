@@ -2,9 +2,9 @@
 layout: post
 category: project
 title: "The Spruce School"
-brief: "outdoor-themed microschool in Denver"
+brief: "outdoor-themed microschool in Colorado"
 date: 2022-05-22
-thumbnail: spruce-school-cover.jpg
+thumbnail: spruce-shool.svg
 external: https://spruceschool.org
 ---
 
