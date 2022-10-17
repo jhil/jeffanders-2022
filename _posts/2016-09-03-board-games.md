@@ -4,11 +4,12 @@ category: list
 title: "Board Games"
 date: 2016-09-03
 link: https://boardgamegeek.com/user/jhilmd
+external: https://boardgamegeek.com/collection/user/jhilmd?sort=rating&sortdir=desc&rankobjecttype=subtype&rankobjectid=1&columns=title%7Cthumbnail%7Cstatus%7Crank%7Crating%7Cbggrating%7Cplays%7Ccomment&geekranks=Board%20Game%20Rank&rated=1&objecttype=thing&ff=1&subtype=boardgame
 color: "#1d265c"
 thumbnail: dice-5
 ---
 
-{% contentfor intro %}
+<!-- {% contentfor intro %}
 I love collecting board games and sharing fun times with friends and family. These are the games in my personal collection right now. Check out my [BoardGameGeek profile](https://www.boardgamegeek.com/user/jhilmd) for more games and ratings.
 {% endcontentfor %}
 
@@ -22,4 +23,4 @@ I love collecting board games and sharing fun times with friends and family. The
     </a>
   </li>
   {% endfor %}
-</ul>
+</ul> -->
