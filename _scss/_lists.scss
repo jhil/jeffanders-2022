@@ -225,3 +225,10 @@ ul li.list-item {
 .book {
 	background-color: var(--light-gray);
 }
+
+.stock-company {
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

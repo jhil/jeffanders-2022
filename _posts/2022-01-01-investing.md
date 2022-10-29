@@ -22,6 +22,17 @@ Emily and I have angel invested small checks in a few startups. We like adding v
 	{% endfor %}
 </ul>
 
+## Stocks
+
+<ul class="card-grid card-grid-compact">
+	{% for stock in site.data.stocks %}
+		<li class="compact-card compact-card-medium"><a href="https://robinhood.com/stocks/{{ stock.ticker }}">
+			<h3 class="stock-company">{{ stock.company }}</h3>
+			<span class="card-secondary">{{ stock.percent | round: 1 }}%</span>
+		</a></li>
+	{% endfor %}
+</ul>
+
 ## Crowdfunding
 
 <ul class="card-grid card-grid-compact">
@@ -34,5 +45,3 @@ Emily and I have angel invested small checks in a few startups. We like adding v
 	{% endif %}
 	{% endfor %}
 </ul>
-
-Equities, cryptocurrencies, and alternatives breakdowns coming soon.

@@ -161,6 +161,11 @@ svg {
 .card-secondary {
 	color: var(--medium-gray);
 	transition: $t;
+	font-weight: normal;
+	font-variant-numeric: tabular-nums;
+	text-align: right;
+	margin-left: 1rem;
+	@extend .p;
 }
 
 .button-more {
