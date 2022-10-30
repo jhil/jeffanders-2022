@@ -24,14 +24,31 @@ Emily and I have angel invested small checks in a few startups. We like adding v
 
 ## Stocks
 
+Some of the equities we hold and the percent of portfolio. Updated 10/29/2022.
+
 <ul class="card-grid card-grid-compact">
 	{% for stock in site.data.stocks %}
 		<li class="compact-card compact-card-medium"><a href="https://robinhood.com/stocks/{{ stock.ticker }}">
-			<h3 class="stock-company">{{ stock.company }}</h3>
-			<span class="card-secondary">{{ stock.percent | round: 1 }}%</span>
+			<h3 class="stock-company">{{ stock.name }}</h3>
+			<span class="card-secondary">{{ stock.percent }}</span>
 		</a></li>
 	{% endfor %}
 </ul>
+
+## Crypto
+
+We're excited about the opportunities in web3 / cryptocurrency and experiment with the technology. Updated 10/29/2022.
+
+<ul class="card-grid card-grid-compact">
+	{% for crypto in site.data.cryptos %}
+		<li class="compact-card compact-card-medium"><a href="{{ crypto.link }}">
+			<h3 class="stock-company">{{ crypto.name }}</h3>
+			<span class="card-secondary">{{ crypto.percent }}</span>
+		</a></li>
+	{% endfor %}
+</ul>
+
+
 
 ## Crowdfunding
 
@@ -39,7 +56,7 @@ Emily and I have angel invested small checks in a few startups. We like adding v
 	{% for investing in site.data.investing %}
 	{% if investing.type contains "crowdfunding" %}
 		<li class="compact-card compact-card-medium"><a href="{{ investing.link }}">
-			<img src="{{ investing.image }}" alt="{{ investing.company }} logo">
+			<img src="{{ investing.image }}" alt="{{ investing.name }} logo">
 			<h3>{{ investing.company }}</h3>
 		</a></li>
 	{% endif %}

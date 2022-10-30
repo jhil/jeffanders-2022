@@ -1,47 +1,47 @@
-name,ticker,company,type,percent,length,updated,
-Loading...,XYL,Xylem,Stock,5.09%,100,10/29/2022,0.0005086148753
-Loading...,ADSK,Autodesk,Stock,4.29%,84.42840421,10/29/2022,
-Loading...,SHOP,Shopify,Stock,4.07%,80.03901678,10/29/2022,
-Loading...,HASI,Hannon Armstrong,Stock,4.06%,79.85758876,10/29/2022,
-Loading...,ICLN,iShares Global Clean Energy ETF,ETF,3.98%,78.22619977,10/29/2022,
-Loading...,NEE,NextEra Energy,Stock,3.92%,77.08739758,10/29/2022,
-Loading...,ENPH,Enphase Energy,Stock,3.79%,74.43669528,10/29/2022,
-Loading...,SQ,Block,Stock,3.50%,68.75097542,10/29/2022,
-Loading...,NVDA,NVIDIA,Stock,3.43%,67.469762,10/29/2022,
-Loading...,LIT,Global X Lithium & Battery Tech ETF,ETF,3.32%,65.33359345,10/29/2022,
-Loading...,TRMB,Trimble,Stock,3.29%,64.63519313,10/29/2022,
-Loading...,PHO,Invesco Water Resources ETF,ETF,3.25%,63.93484198,10/29/2022,
-Loading...,ECL,Ecolab,Stock,3.13%,61.55676941,10/29/2022,
-Loading...,AMAT,Applied Materials,Stock,3.12%,61.2602419,10/29/2022,
-Loading...,ABNB,Airbnb,Stock,2.86%,56.18903629,10/29/2022,
-Loading...,FSLR,First Solar,Stock,2.63%,51.76355833,10/29/2022,
-Loading...,FAN,First Trust Global Wind Energy ETF,ETF,2.57%,50.4365002,10/29/2022,
-Loading...,SQM,Sociedad Quimica y Minera,Stock,2.36%,46.4104565,10/29/2022,
-Loading...,AES,AES,Stock,2.30%,45.16679672,10/29/2022,
-Loading...,IRDM,Iridium Communications,Stock,2.13%,41.96937183,10/29/2022,
-Loading...,SPWR,SunPower,Stock,2.09%,41.00809598,10/29/2022,
-Loading...,GNRC,Generac Holdings,Stock,2.03%,39.84100663,10/29/2022,
-Loading...,WM,Waste Management,Stock,1.96%,38.50712056,10/29/2022,
-Loading...,NET,Cloudflare,Stock,1.92%,37.79262583,10/29/2022,
-Loading...,BG,Bunge,Stock,1.92%,37.75263363,10/29/2022,
-Loading...,TWLO,Twilio,Stock,1.88%,36.87085447,10/29/2022,
-Loading...,INFY,Infosys,Stock,1.86%,36.65626219,10/29/2022,
-Loading...,CLH,Clean Harbors,Stock,1.83%,35.95786188,10/29/2022,
-Loading...,RBLX,Roblox,Stock,1.82%,35.72376122,10/29/2022,
-Loading...,AMRC,Ameresco,Stock,1.76%,34.61763558,10/29/2022,
-Loading...,UPWK,Upwork,Stock,1.66%,32.67655092,10/29/2022,
-Loading...,MRNA,Moderna,Stock,1.50%,29.45181428,10/29/2022,
-Loading...,VWDRY,Vestas Wind Systems,Stock,1.48%,29.14553258,10/29/2022,
-Loading...,MELI,MercadoLibre,Stock,1.31%,25.80228248,10/29/2022,
-Loading...,MSGR,Direxion mRNA ETF,ETF,1.27%,24.94927819,10/29/2022,
-Loading...,TOST,Toast,Stock,1.10%,21.62504877,10/29/2022,
-Loading...,RUN,Sunrun,Stock,1.09%,21.36168552,10/29/2022,
-Loading...,WIT,Wipro,Stock,0.82%,16.18220835,10/29/2022,
-Loading...,HACK,ETFMG Prime Cyber Security ETF,ETF,0.70%,13.79145533,10/29/2022,
-Loading...,GDOT,Green Dot,Stock,0.58%,11.38314475,10/29/2022,
-Loading...,NOTE,FiscalNote,Stock,0.58%,11.35193133,10/29/2022,
-Loading...,NRDS,NerdWallet,Stock,0.56%,10.97346859,10/29/2022,
-Loading...,AFRM,Affirm,Stock,0.50%,9.910261412,10/29/2022,
-Loading...,Z,Zillow,Stock,0.38%,7.525360905,10/29/2022,
-Loading...,EOSE,Eos Energy,Stock,0.18%,3.462738978,10/29/2022,
-Loading...,U,Unity Software,Stock,0.15%,2.851150995,10/29/2022,
+fullname,ticker,name,type,percent,width,updated
+Xylem Inc,XYL,Xylem,Stock,5.1%,100,10/29/2022
+Autodesk Inc,ADSK,Autodesk,Stock,4.3%,84.42840421,10/29/2022
+Shopify Inc,SHOP,Shopify,Stock,4.1%,80.03901678,10/29/2022
+Hannon Armstrong Sustnbl Infrstr Cap Inc,HASI,Hannon Armstrong,Stock,4.1%,79.85758876,10/29/2022
+iShares Global Clean Energy ETF,ICLN,iShares Global Clean Energy ETF,ETF,4.0%,78.22619977,10/29/2022
+NextEra Energy Inc,NEE,NextEra Energy,Stock,3.9%,77.08739758,10/29/2022
+Enphase Energy Inc,ENPH,Enphase Energy,Stock,3.8%,74.43669528,10/29/2022
+Block Inc,SQ,Block,Stock,3.5%,68.75097542,10/29/2022
+NVIDIA Corporation,NVDA,NVIDIA,Stock,3.4%,67.469762,10/29/2022
+Global X Lithium & Battery Tech ETF,LIT,Global X Lithium & Battery Tech ETF,ETF,3.3%,65.33359345,10/29/2022
+Trimble Inc,TRMB,Trimble,Stock,3.3%,64.63519313,10/29/2022
+Invesco Water Resources ETF,PHO,Invesco Water Resources ETF,ETF,3.3%,63.93484198,10/29/2022
+Ecolab Inc,ECL,Ecolab,Stock,3.1%,61.55676941,10/29/2022
+"Applied Materials, Inc.",AMAT,Applied Materials,Stock,3.1%,61.2602419,10/29/2022
+Airbnb Inc,ABNB,Airbnb,Stock,2.9%,56.18903629,10/29/2022
+"First Solar, Inc.",FSLR,First Solar,Stock,2.6%,51.76355833,10/29/2022
+First Trust Global Wind Energy ETF,FAN,First Trust Global Wind Energy ETF,ETF,2.6%,50.4365002,10/29/2022
+Sociedad Quimica y Minera de Chile,SQM,Sociedad Quimica y Minera,Stock,2.4%,46.4104565,10/29/2022
+AES Corp,AES,AES,Stock,2.3%,45.16679672,10/29/2022
+Iridium Communications Inc,IRDM,Iridium Communications,Stock,2.1%,41.96937183,10/29/2022
+SunPower Corporation,SPWR,SunPower,Stock,2.1%,41.00809598,10/29/2022
+Generac Holdings Inc.,GNRC,Generac Holdings,Stock,2.0%,39.84100663,10/29/2022
+"Waste Management, Inc.",WM,Waste Management,Stock,2.0%,38.50712056,10/29/2022
+Cloudflare Inc,NET,Cloudflare,Stock,1.9%,37.79262583,10/29/2022
+Bunge Ltd,BG,Bunge,Stock,1.9%,37.75263363,10/29/2022
+Twilio Inc,TWLO,Twilio,Stock,1.9%,36.87085447,10/29/2022
+Infosys Ltd ADR,INFY,Infosys,Stock,1.9%,36.65626219,10/29/2022
+Clean Harbors Inc,CLH,Clean Harbors,Stock,1.8%,35.95786188,10/29/2022
+Roblox Corp,RBLX,Roblox,Stock,1.8%,35.72376122,10/29/2022
+Ameresco Inc,AMRC,Ameresco,Stock,1.8%,34.61763558,10/29/2022
+Upwork Inc,UPWK,Upwork,Stock,1.7%,32.67655092,10/29/2022
+Moderna Inc,MRNA,Moderna,Stock,1.5%,29.45181428,10/29/2022
+Vestas Wind Systems AS ADR,VWDRY,Vestas Wind Systems,Stock,1.5%,29.14553258,10/29/2022
+MercadoLibre Inc,MELI,MercadoLibre,Stock,1.3%,25.80228248,10/29/2022
+Direxion mRNA ETF,MSGR,Direxion mRNA ETF,ETF,1.3%,24.94927819,10/29/2022
+Toast Inc,TOST,Toast,Stock,1.1%,21.62504877,10/29/2022
+Sunrun Inc,RUN,Sunrun,Stock,1.1%,21.36168552,10/29/2022
+Wipro Limited,WIT,Wipro,Stock,0.8%,16.18220835,10/29/2022
+ETFMG Prime Cyber Security ETF,HACK,ETFMG Prime Cyber Security ETF,ETF,0.7%,13.79145533,10/29/2022
+Green Dot Corporation,GDOT,Green Dot,Stock,0.6%,11.38314475,10/29/2022
+FiscalNote Holdings Inc,NOTE,FiscalNote,Stock,0.6%,11.35193133,10/29/2022
+Nerdwallet Inc,NRDS,NerdWallet,Stock,0.6%,10.97346859,10/29/2022
+Affirm Holdings Inc,AFRM,Affirm,Stock,0.5%,9.910261412,10/29/2022
+Zillow Group Inc Class C,Z,Zillow,Stock,0.4%,7.525360905,10/29/2022
+Eos Energy Enterprises Inc,EOSE,Eos Energy,Stock,0.2%,3.462738978,10/29/2022
+Unity Software Inc,U,Unity Software,Stock,0.1%,2.851150995,10/29/2022
