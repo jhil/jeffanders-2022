@@ -4,7 +4,9 @@
   "description": "",
   "license": "MIT",
   "scripts": {},
-  "dependencies": {},
+  "dependencies": {
+    "uuid": "7"
+  },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "browser-sync": "^2.26.3",
