@@ -12,5 +12,5 @@ link: https://zakforcongress.com
 Zak Malamed is running for the U.S. House seat in New York's Third District. I designed a logo, website, and brand system for the campaign.
 {% endcontentfor %}
 
-{% include pic.html file="zak-for-congress.svg.svg" %}
-{% include pic.html file="zak-website.png" class="shadow" %}
+{% include pic.html file="zak-for-congress.svg" %}
+{% include pic.html file="zak-website.jpg" class="shadow" %}
