@@ -10,12 +10,10 @@ Emily and I have backed a few startups with very small checks. We like helping a
 
 <ul class="card-grid card-grid-compact">
 	{% for investing in site.data.investing %}
-	{% if investing.type contains "angel" %}
 		<li class="compact-card compact-card-medium"><a href="{{ investing.link }}" target="_blank">
 			<img src="{{ investing.image }}" alt="{{ investing.company }} logo">
 			<h3>{{ investing.company }}</h3>
-			<p class="card-secondary">{{ investing.round }}</p>
+			<p class="card-secondary">{{ investing.label }}</p>
 		</a></li>
-	{% endif %}
 	{% endfor %}
 </ul>
