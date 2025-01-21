@@ -1,7 +1,7 @@
 ---
 layout: post
 category: list
-title: "Angel Investing"
+title: "Angel"
 date: 2022-01-01
 thumbnail: circle-multiple
 ---
